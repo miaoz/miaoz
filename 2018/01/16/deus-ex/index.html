@@ -1,0 +1,840 @@
+<!DOCTYPE html>
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+<html class="theme-next muse use-motion" lang="zh-cn">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2"/>
+<meta name="theme-color" content="#222"/>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<link rel="stylesheet" href="/lib/font-awesome/css/font-awesome.min.css?v=4.7.0"/>
+
+<link rel="stylesheet" href="/css/main.css?v=7.2.0"/>
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=7.2.0">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=7.2.0">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=7.2.0">
+
+
+  <link rel="mask-icon" href="/images/logo.svg?v=7.2.0" color="#222">
+
+
+
+
+
+
+
+<script id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Muse',
+    version: '7.2.0',
+    sidebar: {"position":"left","display":"post","offset":12,"onmobile":false},
+    back2top: {"enable":true,"sidebar":false,"scrollpercent":false},
+    fancybox: false,
+    fastclick: false,
+    lazyload: false,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <meta name="description" content="写在前头话说，这次重启，本来非常想走亲切可爱、养生枸杞之类的的大众路线，但是才写没几天，感觉又要原形毕露了。 所以，这玩意儿有人愿意看么？ 大逆转中的机械降神 第一次意识到“机械降神”这个词并感到好奇，是看完《大逆转裁判2》流程，浏览玩家讨论的时候。 当时不少人吐槽福尔摩斯的最后登场，虽然很帅气吧，但过于夸张以至于超乎逻辑，其中就出现了“机械降神”这个评价。 那一瞬间，我自然而然就明白了这个词的">
+<meta property="og:type" content="article">
+<meta property="og:title" content="机械降神和御都合主义">
+<meta property="og:url" content="http://miaoz.me/2018/01/16/deus-ex/index.html">
+<meta property="og:site_name" content="饮水琐话">
+<meta property="og:description" content="写在前头话说，这次重启，本来非常想走亲切可爱、养生枸杞之类的的大众路线，但是才写没几天，感觉又要原形毕露了。 所以，这玩意儿有人愿意看么？ 大逆转中的机械降神 第一次意识到“机械降神”这个词并感到好奇，是看完《大逆转裁判2》流程，浏览玩家讨论的时候。 当时不少人吐槽福尔摩斯的最后登场，虽然很帅气吧，但过于夸张以至于超乎逻辑，其中就出现了“机械降神”这个评价。 那一瞬间，我自然而然就明白了这个词的">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://ws1.sinaimg.cn/large/006tKfTcgy1fnivs1573pj30zk0k0abg.jpg">
+<meta property="og:image" content="https://ws2.sinaimg.cn/large/006tKfTcgy1fnivl72qmlj30vh0lqwj2.jpg">
+<meta property="og:image" content="https://ws3.sinaimg.cn/large/006tKfTcgy1fnivlf21e3j30zk0k0tbg.jpg">
+<meta property="og:image" content="https://ws1.sinaimg.cn/large/006tKfTcgy1fnivlmxti5j30zk0k0jt9.jpg">
+<meta property="og:image" content="https://ws2.sinaimg.cn/large/006tKfTcgy1fnivlv0a6xj30zk0k0af1.jpg">
+<meta property="article:published_time" content="2018-01-16T15:40:00.000Z">
+<meta property="article:modified_time" content="2018-10-01T04:45:03.000Z">
+<meta property="article:author" content="Miaoz">
+<meta property="article:tag" content="research">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://ws1.sinaimg.cn/large/006tKfTcgy1fnivs1573pj30zk0k0abg.jpg">
+
+
+  
+
+
+  <link rel="alternate" href="/atom.xml" title="饮水琐话" type="application/atom+xml"/>
+
+
+
+  
+  
+  <link rel="canonical" href="http://miaoz.me/2018/01/16/deus-ex/"/>
+
+
+
+<script id="page.configurations">
+  CONFIG.page = {
+    sidebar: "",
+  };
+</script>
+
+  <title>机械降神和御都合主义 | 饮水琐话</title>
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .motion-element,
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-title { opacity: initial; }
+
+  .use-motion .logo,
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
+<meta name="generator" content="Hexo 4.2.0"></head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-cn">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/" class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">饮水琐话</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+    
+      
+        <p class="site-subtitle">生活如饮水，甘苦悉具，冷暖自知。</p>
+      
+    
+    
+  </div>
+
+  <div class="site-nav-toggle">
+    <button aria-label="Toggle navigation bar">
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+
+
+<nav class="site-nav">
+  
+    <ul id="menu" class="menu">
+      
+        
+        
+        
+          
+          <li class="menu-item menu-item-home">
+
+    
+    
+      
+    
+
+    
+
+    <a href="/" rel="section">&lt;i class&#x3D;&quot;menu-item-icon fa fa-fw fa-home&quot;&gt;&lt;&#x2F;i&gt; &lt;br&#x2F;&gt;Home</a>
+
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-archives">
+
+    
+    
+      
+    
+
+    
+
+    <a href="/archives/" rel="section">&lt;i class&#x3D;&quot;menu-item-icon fa fa-fw fa-archive&quot;&gt;&lt;&#x2F;i&gt; &lt;br&#x2F;&gt;Archives</a>
+
+  </li>
+
+      
+      
+    </ul>
+  
+
+  
+    
+
+  
+
+  
+</nav>
+
+
+
+</div>
+    </header>
+
+    
+
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://miaoz.me/2018/01/16/deus-ex/"/>
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Miaoz"/>
+      <meta itemprop="description" content="网路无限宽广。"/>
+      <meta itemprop="image" content="/images/avatar.gif"/>
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="饮水琐话"/>
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">机械降神和御都合主义
+
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+
+          
+          
+          
+
+          
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+
+              
+                
+              
+
+              <time title="Created: 2018-01-16 23:40:00" itemprop="dateCreated datePublished" datetime="2018-01-16T23:40:00+08:00">2018-01-16</time>
+            </span>
+          
+
+          
+            
+
+            
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">Edited on</span>
+                
+                <time title="Modified: 2018-10-01 12:45:03" itemprop="dateModified" datetime="2018-10-01T12:45:03+08:00">2018-10-01</time>
+              </span>
+            
+          
+
+          
+
+          
+            
+            
+          
+
+          
+          
+
+          
+
+          
+
+          <br/>
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <p><img src="https://ws1.sinaimg.cn/large/006tKfTcgy1fnivs1573pj30zk0k0abg.jpg" alt="0"></p>
+<h2 id="写在前头"><a href="#写在前头" class="headerlink" title="写在前头"></a>写在前头</h2><p>话说，这次重启，本来非常想走亲切可爱、养生枸杞之类的的大众路线，但是才写没几天，感觉又要原形毕露了。</p>
+<p>所以，这玩意儿有人愿意看么？</p>
+<h2 id="大逆转中的机械降神"><a href="#大逆转中的机械降神" class="headerlink" title="大逆转中的机械降神"></a>大逆转中的机械降神</h2><p><img src="https://ws2.sinaimg.cn/large/006tKfTcgy1fnivl72qmlj30vh0lqwj2.jpg" alt="1"></p>
+<p>第一次意识到“机械降神”这个词并感到好奇，是看完《大逆转裁判2》流程，浏览玩家讨论的时候。</p>
+<p>当时不少人吐槽福尔摩斯的最后登场，虽然很帅气吧，但过于夸张以至于超乎逻辑，其中就出现了“机械降神”这个评价。</p>
+<p>那一瞬间，我自然而然就明白了这个词的用意，顺手在维基上一查。</p>
+<p>Deus ex machina，这是个拉丁语词组（英译：God from the machine），意思是机关跑出的神（Deus 在拉丁语中泛指神），中文一般翻译为“舞台机关送神”、“机械降神”、“机器神”、“解围之神”等。</p>
+<p>在古希腊戏剧，当剧情陷入胶着，困境难以解决时，突然出现拥有强大力量的神将难题解决，令故事得以收拾、有个好结局。当时，利用起重机或起升机的机关，将扮演神的下等演员载送至舞台上。</p>
+<p>这种表演手法是人为的，制造出意料之外的剧情大逆转。如今，这种手法通常被评论家认为是不高明的说书技巧，因为它破坏了故事的内在逻辑，纵使有时候会为了这个理由而故意采用。</p>
+<p>唔……果不其然啊。</p>
+<p>然后，当我端详着 Deus ex，发现自己并不是第一次见到它。</p>
+<p>仍然跟游戏有关，而且大大的有关。</p>
+<h2 id="杀出重围是什么鬼"><a href="#杀出重围是什么鬼" class="headerlink" title="杀出重围是什么鬼"></a>杀出重围是什么鬼</h2><p><img src="https://ws3.sinaimg.cn/large/006tKfTcgy1fnivlf21e3j30zk0k0tbg.jpg" alt="2"></p>
+<p>Deus Ex（国内通常译作“杀出重围”，其实并不恰当）是以<strong>赛博朋克</strong>为主题的动作角色扮演及第一人称射击游戏系列。</p>
+<p>故事设定于科技非常发达，义体强化普及的反乌托邦未来世界，主要集中在想要控制世界的秘密组织之间的冲突，以及超人类主义和科技所带来的影响。</p>
+<p>游戏的核心，正是“人造之神”与“强大外力干涉”的故事。</p>
+<p>强大跨国科技企业，以及类似光明会（illuminati）这样幕后组织，渗透入人类社会的各个角落，坐拥高端科技与财富，操纵影响着政治经济乃至于民众的生活，它们毫无疑问有着如神一般的力量和地位。</p>
+<p>同时，黑科技所造就的，有着超能力一般的“义体强化人”也是对“人造之神”的又一个隐喻。</p>
+<p>Deus Ex 是个好游戏，不过我们就暂时到这里。</p>
+<h2 id="御都合主义"><a href="#御都合主义" class="headerlink" title="御都合主义"></a>御都合主义</h2><p><img src="https://ws1.sinaimg.cn/large/006tKfTcgy1fnivlmxti5j30zk0k0jt9.jpg" alt="3"></p>
+<p>回到<strong>机械降神</strong>的定义，我心中很快又浮现了另一个词语。</p>
+<p>御都合主义（日语：ごつごうしゅぎ），原本是指没有主见或原则，行为随时机或场合改变的人。</p>
+<p>如今，这个术语主要是指在创作作品中，为了让故事得以顺利进行，在剧情中安排了不自然或者不合理的发展，诸如吃书、超展开、不符合逻辑或没有伏笔的偶然等等。</p>
+<p>《火影忍者》、《海贼王》、《名侦探柯南》……许多非常流行的、优秀的，尤其连载时间超长的作品都遭受过都合主义的批评。</p>
+<p>而且，我也完全相信，不论古今中外，什么文艺作品，使用“机械降神”、“都合主义”，或者别的什么词，我们都曾经对某些作品有过相似的看法，这里就不再列举了。</p>
+<h2 id="最后"><a href="#最后" class="headerlink" title="最后"></a>最后</h2><p><img src="https://ws2.sinaimg.cn/large/006tKfTcgy1fnivlv0a6xj30zk0k0af1.jpg" alt="4"></p>
+<p>创作无疑是一件伟大的事情，伟大不易造就，所以创作者自有其困境。</p>
+<p>如何把握无巧不成书和弄巧成拙之间的微妙，对于每个创作者、乃至于每一次创作都是一次严峻的考验。</p>
+<p>而作为读者和观众，对于优秀的作品，你可以微笑着欣赏，也可以举高高吹爆！是的，《大逆转裁判》和《Deus Ex》都是好游戏啊好游戏！</p>
+<p>不管怎么说，你学会了这俩时髦值那么高的词儿了么？</p>
+<p>—— 机械降神和御都合主义。</p>
+
+      
+    </div>
+
+    
+
+    
+      
+    
+
+    
+    
+    
+
+    
+
+    
+      
+    
+    
+
+    
+
+    <footer class="post-footer">
+      
+        
+          
+        
+        <div class="post-tags">
+          
+            <a href="/tags/research/" rel="tag"># research</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2018/01/15/earth/" rel="next" title="如何告诉外星警察叔叔地球在哪里？">
+                <i class="fa fa-chevron-left"></i> 如何告诉外星警察叔叔地球在哪里？
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2018/01/17/baader-meinhof-phenomenon/" rel="prev" title="巴德尔-迈因霍夫现象：这妹妹我曾见过">
+                巴德尔-迈因霍夫现象：这妹妹我曾见过 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+  </div>
+
+
+          </div>
+          
+
+  
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            Table of Contents
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            Overview
+          </li>
+        </ul>
+      
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <p class="site-author-name" itemprop="name">Miaoz</p>
+              <div class="site-description motion-element" itemprop="description">网路无限宽广。</div>
+          </div>
+
+          
+            <nav class="site-state motion-element">
+              
+                <div class="site-state-item site-state-posts">
+                
+                  <a href="/archives/%20%7C%7C%20archive">
+                
+                    <span class="site-state-item-count">38</span>
+                    <span class="site-state-item-name">posts</span>
+                  </a>
+                </div>
+              
+
+              
+
+              
+                
+                
+                <div class="site-state-item site-state-tags">
+                  
+                    
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                    <span class="site-state-item-count">6</span>
+                    <span class="site-state-item-name">tags</span>
+                  
+                </div>
+              
+            </nav>
+          
+
+          
+            <div class="feed-link motion-element">
+              <a href="/atom.xml" rel="alternate">
+                <i class="fa fa-rss"></i>
+                RSS
+              </a>
+            </div>
+          
+
+          
+
+          
+            <div class="links-of-author motion-element">
+              
+                <span class="links-of-author-item">
+                  
+                  
+                    
+                  
+                  
+                    
+                  
+                  <a href="https://github.com/miaoz" title="GitHub &amp;rarr; https:&#x2F;&#x2F;github.com&#x2F;miaoz" rel="noopener" target="_blank">&lt;i class&#x3D;&quot;fa fa-fw fa-github&quot;&gt;&lt;&#x2F;i&gt;GitHub</a>
+                </span>
+              
+                <span class="links-of-author-item">
+                  
+                  
+                    
+                  
+                  
+                    
+                  
+                  <a href="mailto:yimouren@gmail.com" title="E-Mail &amp;rarr; mailto:yimouren@gmail.com" rel="noopener" target="_blank">&lt;i class&#x3D;&quot;fa fa-fw fa-envelope&quot;&gt;&lt;&#x2F;i&gt;E-Mail</a>
+                </span>
+              
+                <span class="links-of-author-item">
+                  
+                  
+                    
+                  
+                  
+                    
+                  
+                  <a href="https://twitter.com/_miaoz_" title="Twitter &amp;rarr; https:&#x2F;&#x2F;twitter.com&#x2F;_miaoz_" rel="noopener" target="_blank">&lt;i class&#x3D;&quot;fa fa-fw fa-twitter&quot;&gt;&lt;&#x2F;i&gt;Twitter</a>
+                </span>
+              
+            </div>
+          
+
+          
+
+          
+          
+
+          
+        </div>
+      </div>
+
+      
+      <!--noindex-->
+        <div class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+            
+            
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#写在前头"><span class="nav-number">1.</span> <span class="nav-text">写在前头</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#大逆转中的机械降神"><span class="nav-number">2.</span> <span class="nav-text">大逆转中的机械降神</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#杀出重围是什么鬼"><span class="nav-number">3.</span> <span class="nav-text">杀出重围是什么鬼</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#御都合主义"><span class="nav-number">4.</span> <span class="nav-text">御都合主义</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#最后"><span class="nav-number">5.</span> <span class="nav-text">最后</span></a></li></ol></div>
+            
+
+          </div>
+        </div>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+  <div id="sidebar-dimmer"></div>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2020</span>
+  <span class="with-love" id="animate">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Miaoz</span>
+
+  
+
+  
+</div>
+
+
+  <div class="powered-by">Powered by <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> v4.2.0</div>
+
+
+
+  <span class="post-meta-divider">|</span>
+
+
+
+  <div class="theme-info">Theme – <a href="https://theme-next.org/" class="theme-link" rel="noopener" target="_blank">NexT.Muse</a> v7.2.0</div>
+
+
+
+
+        
+
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+    
+
+    
+  </div>
+
+  
+
+<script>
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+
+  
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  <script src="/lib/jquery/index.js?v=3.4.1"></script>
+
+  
+  <script src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+
+  
+  <script src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+
+
+
+  <script src="/js/utils.js?v=7.2.0"></script>
+
+  <script src="/js/motion.js?v=7.2.0"></script>
+
+
+
+  
+  
+
+
+  <script src="/js/schemes/muse.js?v=7.2.0"></script>
+
+
+
+  
+  <script src="/js/scrollspy.js?v=7.2.0"></script>
+<script src="/js/post-details.js?v=7.2.0"></script>
+
+
+
+  <script src="/js/next-boot.js?v=7.2.0"></script>
+
+  
+
+  
+
+  
+
+  
+
+  
+
+
+  
+
+
+  
+
+
+
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+
+  
+
+</body>
+</html>

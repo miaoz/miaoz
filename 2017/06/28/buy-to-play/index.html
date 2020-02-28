@@ -1,0 +1,863 @@
+<!DOCTYPE html>
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+<html class="theme-next muse use-motion" lang="zh-cn">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2"/>
+<meta name="theme-color" content="#222"/>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<link rel="stylesheet" href="/lib/font-awesome/css/font-awesome.min.css?v=4.7.0"/>
+
+<link rel="stylesheet" href="/css/main.css?v=7.2.0"/>
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=7.2.0">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=7.2.0">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=7.2.0">
+
+
+  <link rel="mask-icon" href="/images/logo.svg?v=7.2.0" color="#222">
+
+
+
+
+
+
+
+<script id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Muse',
+    version: '7.2.0',
+    sidebar: {"position":"left","display":"post","offset":12,"onmobile":false},
+    back2top: {"enable":true,"sidebar":false,"scrollpercent":false},
+    fancybox: false,
+    fastclick: false,
+    lazyload: false,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <meta name="description" content="囤积数据的松鼠  什么是松鼠症，指「囤积症（Compulsive hoarding）」，一种过度性收集物品的强迫行为。因为松鼠有囤积食物过冬的行为而借喻。  年轻的时候，特别喜欢上 VeryCD。 打开电脑，没日没夜挂着驴，搜罗下载各种影视剧、电子书、音乐等等，非把身边所有的存储介质塞得满谷满仓不可。 那时候，相信这些东西只要存在硬盘里，早晚有一天会发挥作用。 后来经历了几次数据丢失，终于明白：">
+<meta property="og:type" content="article">
+<meta property="og:title" content="凭本事买的游戏，还要花时间玩？">
+<meta property="og:url" content="http://miaoz.me/2017/06/28/buy-to-play/index.html">
+<meta property="og:site_name" content="饮水琐话">
+<meta property="og:description" content="囤积数据的松鼠  什么是松鼠症，指「囤积症（Compulsive hoarding）」，一种过度性收集物品的强迫行为。因为松鼠有囤积食物过冬的行为而借喻。  年轻的时候，特别喜欢上 VeryCD。 打开电脑，没日没夜挂着驴，搜罗下载各种影视剧、电子书、音乐等等，非把身边所有的存储介质塞得满谷满仓不可。 那时候，相信这些东西只要存在硬盘里，早晚有一天会发挥作用。 后来经历了几次数据丢失，终于明白：">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://ws4.sinaimg.cn/large/006tKfTcgy1fh0s20w2uvj30rs0fnadj.jpg">
+<meta property="og:image" content="https://ws3.sinaimg.cn/large/006tKfTcgy1fh0s3ab9pgj30rs0fmabq.jpg">
+<meta property="og:image" content="https://ws2.sinaimg.cn/large/006tKfTcgy1fh0s3so1lxj30rs0fn0u1.jpg">
+<meta property="og:image" content="https://ws3.sinaimg.cn/large/006tKfTcgy1fh0s4569o6j30rs0fndgy.jpg">
+<meta property="og:image" content="https://ws4.sinaimg.cn/large/006tKfTcgy1fh0s4fuceej30rs0fnjt2.jpg">
+<meta property="article:published_time" content="2017-06-28T15:00:00.000Z">
+<meta property="article:modified_time" content="2018-10-01T04:46:38.000Z">
+<meta property="article:author" content="Miaoz">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://ws4.sinaimg.cn/large/006tKfTcgy1fh0s20w2uvj30rs0fnadj.jpg">
+
+
+  
+
+
+  <link rel="alternate" href="/atom.xml" title="饮水琐话" type="application/atom+xml"/>
+
+
+
+  
+  
+  <link rel="canonical" href="http://miaoz.me/2017/06/28/buy-to-play/"/>
+
+
+
+<script id="page.configurations">
+  CONFIG.page = {
+    sidebar: "",
+  };
+</script>
+
+  <title>凭本事买的游戏，还要花时间玩？ | 饮水琐话</title>
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .motion-element,
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-title { opacity: initial; }
+
+  .use-motion .logo,
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
+<meta name="generator" content="Hexo 4.2.0"></head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-cn">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/" class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">饮水琐话</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+    
+      
+        <p class="site-subtitle">生活如饮水，甘苦悉具，冷暖自知。</p>
+      
+    
+    
+  </div>
+
+  <div class="site-nav-toggle">
+    <button aria-label="Toggle navigation bar">
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+
+
+<nav class="site-nav">
+  
+    <ul id="menu" class="menu">
+      
+        
+        
+        
+          
+          <li class="menu-item menu-item-home">
+
+    
+    
+      
+    
+
+    
+
+    <a href="/" rel="section">&lt;i class&#x3D;&quot;menu-item-icon fa fa-fw fa-home&quot;&gt;&lt;&#x2F;i&gt; &lt;br&#x2F;&gt;Home</a>
+
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-archives">
+
+    
+    
+      
+    
+
+    
+
+    <a href="/archives/" rel="section">&lt;i class&#x3D;&quot;menu-item-icon fa fa-fw fa-archive&quot;&gt;&lt;&#x2F;i&gt; &lt;br&#x2F;&gt;Archives</a>
+
+  </li>
+
+      
+      
+    </ul>
+  
+
+  
+    
+
+  
+
+  
+</nav>
+
+
+
+</div>
+    </header>
+
+    
+
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://miaoz.me/2017/06/28/buy-to-play/"/>
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Miaoz"/>
+      <meta itemprop="description" content="网路无限宽广。"/>
+      <meta itemprop="image" content="/images/avatar.gif"/>
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="饮水琐话"/>
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">凭本事买的游戏，还要花时间玩？
+
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+
+          
+          
+          
+
+          
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+
+              
+                
+              
+
+              <time title="Created: 2017-06-28 23:00:00" itemprop="dateCreated datePublished" datetime="2017-06-28T23:00:00+08:00">2017-06-28</time>
+            </span>
+          
+
+          
+            
+
+            
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">Edited on</span>
+                
+                <time title="Modified: 2018-10-01 12:46:38" itemprop="dateModified" datetime="2018-10-01T12:46:38+08:00">2018-10-01</time>
+              </span>
+            
+          
+
+          
+
+          
+            
+            
+          
+
+          
+          
+
+          
+
+          
+
+          <br/>
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <h2 id="囤积数据的松鼠"><a href="#囤积数据的松鼠" class="headerlink" title="囤积数据的松鼠"></a>囤积数据的松鼠</h2><p><img src="https://ws4.sinaimg.cn/large/006tKfTcgy1fh0s20w2uvj30rs0fnadj.jpg" alt="松鼠症"></p>
+<blockquote>
+<p>什么是松鼠症，指「囤积症（Compulsive hoarding）」，一种过度性收集物品的强迫行为。因为松鼠有囤积食物过冬的行为而借喻。</p>
+</blockquote>
+<p>年轻的时候，特别喜欢上 VeryCD。</p>
+<p>打开电脑，没日没夜挂着驴，搜罗下载各种影视剧、电子书、音乐等等，非把身边所有的存储介质塞得满谷满仓不可。</p>
+<p>那时候，相信这些东西只要存在硬盘里，早晚有一天会发挥作用。</p>
+<p>后来经历了几次数据丢失，终于明白：</p>
+<p><strong>我特么根本不会去看啊！</strong></p>
+<p>然而松鼠症并不会那么容易治好。</p>
+<p>如果说，仅仅下载的功夫不足以激发拥有的错觉，而数据在硬盘里还害怕丢失的话，那么实打实花钱占有带来的快感就更胜一筹了。</p>
+<p>参加工作后，每次遇到电商书籍促销如打鸡血。</p>
+<p>一套几百页的书，包装精致，主题严肃，要分量有分量，要档次有档次，标价小几百块钱，电商价常年七八折，再来个满 300 减 150……</p>
+<p>简直白菜好么？</p>
+<p>只买一单你出门好意思和人打招呼么？</p>
+<p>成堆的书随便买，买来的书拆了包往书架上一摆，从此束之高阁，不见天日。</p>
+<p>没事的时候往书架前一站，那满满当当知识溢出的感觉，啧……</p>
+<p>至于三年前 618 买来的那些书什么时候看完？</p>
+<p>时人云：<strong>「买书如山倒，读书如抽丝。」</strong></p>
+<p>不提也罢。</p>
+<h2 id="G胖的阴谋"><a href="#G胖的阴谋" class="headerlink" title="G胖的阴谋"></a>G胖的阴谋</h2><p><img src="https://ws3.sinaimg.cn/large/006tKfTcgy1fh0s3ab9pgj30rs0fmabq.jpg" alt="G胖的微笑"></p>
+<p>最近几年，又开始迷上了 Steam 买游戏。</p>
+<p>一开始，是从慈善包入手，然后事情很快发生变化。</p>
+<p>什么？这个 Bundle 这么多牛逼独立游戏，只要 1 刀就能收入囊中？不买还是人？</p>
+<p>什么？只要多花 5 刀就可以再获得这款最近人人都在讨论的神作？划算，收了！</p>
+<p>什么？某开发商本周大甩卖，小时候狂肝数百上千小时的那个游戏只要 6 刀？还不赶紧补个票！</p>
+<p>什么？Steam 夏季特卖，数千款游戏疯狂促销，愿望清单里面有 42 款参加打折，其中 20 款是历史低价！</p>
+<p>我买，我买还不行么？</p>
+<p>……</p>
+<p>至于买来后？</p>
+<p>且不说我还有 PS4、PSV、WiiU、3DS 需要伺候了——</p>
+<p><strong>「凭本事买的游戏，还要花时间玩？」</strong></p>
+<h2 id="你对真正的力量一无所知"><a href="#你对真正的力量一无所知" class="headerlink" title="你对真正的力量一无所知"></a>你对真正的力量一无所知</h2><p><img src="https://ws2.sinaimg.cn/large/006tKfTcgy1fh0s3so1lxj30rs0fn0u1.jpg" alt="You know nothing about true power"></p>
+<p>如今，网络速度提升了，大容量硬盘也实在便宜，百兆光纤一开，四盘位 NAS 整一个，十几个 T 的硬盘阵列一组，一个日夜之间吞吐海量数据如同饕餮。</p>
+<p>积草屯粮，似乎就掌握了这些数据。</p>
+<p>然而，在获取信息易如反掌的互联网时代，外部记忆存放在网络上或自己的硬盘上，有什么区别呢？</p>
+<p>区区一点点带宽、电费和硬盘空间，哪怕再加上金钱，也并不足以使数据真正参与人自身的信息加工。</p>
+<p>当我发现自己一本书买了两次的时候，方才意识到买书太多，看书太少，本末倒置。</p>
+<p>当我根据游戏库存做了跟踪表，方才意识到自己有太多的坑要填，安排到退休都不一定玩得完。</p>
+<p>这样的囤积除了带来一点空洞的快感，根本毫无益处。甚至还日益挤占物理和精神上的空间，给自己带来更多的压力和焦躁。</p>
+<p><img src="https://ws3.sinaimg.cn/large/006tKfTcgy1fh0s4569o6j30rs0fndgy.jpg" alt="to the moon"></p>
+<p><a href="http://freebirdgames.com/zh/to_the_moon/" target="_blank" rel="noopener">《To the Moon》</a>是一款发售于 2011 年的游戏，讲述两个医生进入一个临终老人的记忆，去满足他遗愿的故事。游戏获得的荣誉且不说，我在过去数年的某一次 Steam 促销中购入，然后它就躺在我的游戏库里。</p>
+<p>直到今年，听闻心动准备推出高清重制版，我方才在某个周末花了一个下午将其打通。</p>
+<p>在数个小时里，激素、神经元和泪腺，为一个故事所牵引澎湃，直到通关后的数日……那怅然若失的感觉仍久久萦绕。</p>
+<p>这种感觉，不会发生在「To the Moon」默默躺在我的硬盘里的时候。</p>
+<p>书只有读了的那一刻，里面的信息才被你所汲取，否则它们只会呆在书架上发霉。游戏，也只有打通了，才算是真的拥有，否则它们将只是一堆存在于硬盘里的 0 和 1。</p>
+<p>花费金钱只是信息消费链条里的一步，并且远远不是最关键的一步，花时间去吸收、加工、内化，纳为己用，才是首要。</p>
+<p>信息只有从外部世界进入到个人意识中，编码成电信号和化学信号，经过大脑皮层、小脑、海马体与杏仁核复杂的共同作用，方才有意义和价值的产生。</p>
+<h2 id="有限无穷，理性加一"><a href="#有限无穷，理性加一" class="headerlink" title="有限无穷，理性加一"></a>有限无穷，理性加一</h2><p><img src="https://ws4.sinaimg.cn/large/006tKfTcgy1fh0s4fuceej30rs0fnjt2.jpg" alt="理性加一"></p>
+<p>不管春秋战国是何等的百家争鸣、圣贤如林；也不管民国时期是如何思想自由，「大师」迭出。</p>
+<p>有一个事实我相信，如今的时代，信息的制造者前所未有的多，信息生产的速度前所未有的快，信息的汲取也前所未有的便利。</p>
+<p>哪怕是泥沙俱下，良莠不齐，在庞大的基数中诞生的杰作也远胜过去任何一个时代。</p>
+<p>想想你想看但没时间看的剧，想读但没时间读的书，想玩但没时间玩的游戏……</p>
+<p>是不是这个道理？</p>
+<p>不同意就是不客观！</p>
+<p>每时每刻，都有无数的创造者在争夺人们的注意力。</p>
+<p>非常遗憾，今人绝对不能胜过古人的一点是，每人每天还是只有二十四个小时。</p>
+<p>一场电影少说两个小时；</p>
+<p>一部剧轻轻松松数十个小时；</p>
+<p>一本书囫囵吞枣十数个小时，要是精读翻倍不止；</p>
+<p>一个游戏，打通十个到数十个小时不等，深入研究数百个小时也不算多；</p>
+<p>……</p>
+<p>你每天都多少个小时能够花在这上面呢？</p>
+<p>以有限对无穷，面对这种幸福的烦恼，我们只能有选择的消费，<strong>理性加一</strong>。</p>
+<p>关键还是要明白，只是囤积毫无用处，读了看了玩了，才是自己的。</p>
+
+      
+    </div>
+
+    
+
+    
+      
+    
+
+    
+    
+    
+
+    
+
+    
+      
+    
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2017/06/19/why-not/" rel="next" title="来都来了？我现在就走！">
+                <i class="fa fa-chevron-left"></i> 来都来了？我现在就走！
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2017/07/02/one-journey/" rel="prev" title="一次远行，一枝桃花">
+                一次远行，一枝桃花 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+  </div>
+
+
+          </div>
+          
+
+  
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            Table of Contents
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            Overview
+          </li>
+        </ul>
+      
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <p class="site-author-name" itemprop="name">Miaoz</p>
+              <div class="site-description motion-element" itemprop="description">网路无限宽广。</div>
+          </div>
+
+          
+            <nav class="site-state motion-element">
+              
+                <div class="site-state-item site-state-posts">
+                
+                  <a href="/archives/%20%7C%7C%20archive">
+                
+                    <span class="site-state-item-count">38</span>
+                    <span class="site-state-item-name">posts</span>
+                  </a>
+                </div>
+              
+
+              
+
+              
+                
+                
+                <div class="site-state-item site-state-tags">
+                  
+                    
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                    <span class="site-state-item-count">6</span>
+                    <span class="site-state-item-name">tags</span>
+                  
+                </div>
+              
+            </nav>
+          
+
+          
+            <div class="feed-link motion-element">
+              <a href="/atom.xml" rel="alternate">
+                <i class="fa fa-rss"></i>
+                RSS
+              </a>
+            </div>
+          
+
+          
+
+          
+            <div class="links-of-author motion-element">
+              
+                <span class="links-of-author-item">
+                  
+                  
+                    
+                  
+                  
+                    
+                  
+                  <a href="https://github.com/miaoz" title="GitHub &amp;rarr; https:&#x2F;&#x2F;github.com&#x2F;miaoz" rel="noopener" target="_blank">&lt;i class&#x3D;&quot;fa fa-fw fa-github&quot;&gt;&lt;&#x2F;i&gt;GitHub</a>
+                </span>
+              
+                <span class="links-of-author-item">
+                  
+                  
+                    
+                  
+                  
+                    
+                  
+                  <a href="mailto:yimouren@gmail.com" title="E-Mail &amp;rarr; mailto:yimouren@gmail.com" rel="noopener" target="_blank">&lt;i class&#x3D;&quot;fa fa-fw fa-envelope&quot;&gt;&lt;&#x2F;i&gt;E-Mail</a>
+                </span>
+              
+                <span class="links-of-author-item">
+                  
+                  
+                    
+                  
+                  
+                    
+                  
+                  <a href="https://twitter.com/_miaoz_" title="Twitter &amp;rarr; https:&#x2F;&#x2F;twitter.com&#x2F;_miaoz_" rel="noopener" target="_blank">&lt;i class&#x3D;&quot;fa fa-fw fa-twitter&quot;&gt;&lt;&#x2F;i&gt;Twitter</a>
+                </span>
+              
+            </div>
+          
+
+          
+
+          
+          
+
+          
+        </div>
+      </div>
+
+      
+      <!--noindex-->
+        <div class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+            
+            
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#囤积数据的松鼠"><span class="nav-number">1.</span> <span class="nav-text">囤积数据的松鼠</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#G胖的阴谋"><span class="nav-number">2.</span> <span class="nav-text">G胖的阴谋</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#你对真正的力量一无所知"><span class="nav-number">3.</span> <span class="nav-text">你对真正的力量一无所知</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#有限无穷，理性加一"><span class="nav-number">4.</span> <span class="nav-text">有限无穷，理性加一</span></a></li></ol></div>
+            
+
+          </div>
+        </div>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+  <div id="sidebar-dimmer"></div>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2020</span>
+  <span class="with-love" id="animate">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Miaoz</span>
+
+  
+
+  
+</div>
+
+
+  <div class="powered-by">Powered by <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> v4.2.0</div>
+
+
+
+  <span class="post-meta-divider">|</span>
+
+
+
+  <div class="theme-info">Theme – <a href="https://theme-next.org/" class="theme-link" rel="noopener" target="_blank">NexT.Muse</a> v7.2.0</div>
+
+
+
+
+        
+
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+    
+
+    
+  </div>
+
+  
+
+<script>
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+
+  
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  <script src="/lib/jquery/index.js?v=3.4.1"></script>
+
+  
+  <script src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+
+  
+  <script src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+
+
+
+  <script src="/js/utils.js?v=7.2.0"></script>
+
+  <script src="/js/motion.js?v=7.2.0"></script>
+
+
+
+  
+  
+
+
+  <script src="/js/schemes/muse.js?v=7.2.0"></script>
+
+
+
+  
+  <script src="/js/scrollspy.js?v=7.2.0"></script>
+<script src="/js/post-details.js?v=7.2.0"></script>
+
+
+
+  <script src="/js/next-boot.js?v=7.2.0"></script>
+
+  
+
+  
+
+  
+
+  
+
+  
+
+
+  
+
+
+  
+
+
+
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+
+  
+
+</body>
+</html>
