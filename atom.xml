@@ -45,6 +45,232 @@
   </entry>
   
   <entry>
+    <title>macOS 与 Windows 的字体渲染</title>
+    <link href="http://miaoz.me/2018/02/09/font-rendering/"/>
+    <id>http://miaoz.me/2018/02/09/font-rendering/</id>
+    <published>2018-02-09T01:00:00.000Z</published>
+    <updated>2020-12-22T11:11:23.865Z</updated>
+    
+    <content type="html"><![CDATA[<p><img src="https://blog.yingtaoxianbao.com/img/202012/font-rendering-0.jpg" alt="font-rendering-0"></p><p>假如你同时用过 macOS 和 Windows，可能会发现一个很微妙但是又确实存在的区别：</p><p>这两个系统上的字体看起来不太一样。</p><p><img src="https://blog.yingtaoxianbao.com/img/202012/font-rendering-1.jpg" alt="font-rendering-1"></p><p>如果是第一次看到 macOS，你可能会觉得字体看起来会有些毛茸茸、“发虚”的感觉（在 Retina 屏幕下这一点已经大幅度改善），但似乎更好看。</p><p>而一旦你适应了 macOS 的字体风格，再回头看 Windows，就会感觉那上面的字体虽然清晰，却显得有些单调丑陋。</p><p>为什么呢？</p><p>因为 macOS 和 Windows 采用不同的字体渲染策略。</p><p>对于如何在屏幕上呈现字体，苹果和微软有着不同的看法。</p><ul><li>苹果认为，字体算法的目标是尽可能还原字体的原始设计，即使代价是造成些许模糊。</li><li>微软认为，字体的形状要适应像素的限制，保证清晰，容易易辨识，即使代价是字体的形状因此背离原始设计。</li></ul><p><img src="https://blog.yingtaoxianbao.com/img/202012/font-rendering-2.jpg" alt="font-rendering-2"></p><p>对于字体渲染风格的喜好或许因人而异，只不过我恰好比较喜欢苹果的风格。</p><p>事实上，这正是我第一次接触到苹果产品时最深刻的印象。</p><p><img src="https://blog.yingtaoxianbao.com/img/202012/font-rendering-3.png" alt="font-rendering-3"></p><p>那个时候，高分辨率的屏幕还没有大行其道，而我也还是个用着神船笔记本的穷学生，一次偶然装了 Safari for Windows，却惊讶地发现，同样一个网页，在 Safari 里看起来就是比较美！</p><p>感谢那些向 Windows 世界展示了苹果美学的工程师，尽管他们后来放弃维护这个产品。</p><p>虽然那是一种毛茸茸的美，但却一下子击中了我，使我义无反顾地成为了忠实的苹果用户。</p><p>事实上，随着软硬件的不断进化，不同系统之间的字体渲染技术差距正在减少，如果有区别，也主要是各自的理念和偏好造成的。</p><p><img src="https://blog.yingtaoxianbao.com/img/202012/font-rendering-4.png" alt="font-rendering-4"></p><p>尽管如此，macOS 的字体渲染风格在美感上还是得到较多认同的，所以诸如 GDI++、MacType 之类在 Windows 上模仿 macOS 字体渲染风格的软件层出不穷，而苹果用户则少有想要获得 Windows 字体渲染效果的需求。</p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;&lt;img src=&quot;https://blog.yingtaoxianbao.com/img/202012/font-rendering-0.jpg&quot; alt=&quot;font-rendering-0&quot;&gt;&lt;/p&gt;
+&lt;p&gt;假如你同时用过 macOS 和
+        
+      
+    
+    </summary>
+    
+    
+    
+      <category term="research" scheme="http://miaoz.me/tags/research/"/>
+    
+      <category term="apple" scheme="http://miaoz.me/tags/apple/"/>
+    
+      <category term="macOS" scheme="http://miaoz.me/tags/macOS/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>macOS 软件安装包 pkg 和 dmg</title>
+    <link href="http://miaoz.me/2018/01/26/macOS-pkg&amp;dmg/"/>
+    <id>http://miaoz.me/2018/01/26/macOS-pkg&amp;dmg/</id>
+    <published>2018-01-26T01:00:00.000Z</published>
+    <updated>2020-12-22T11:22:23.209Z</updated>
+    
+    <content type="html"><![CDATA[<p><img src="https://blog.yingtaoxianbao.com/img/202012/apk&dmg-1.jpg" alt="apk&amp;dmg-1"></p><p>从 Snow Leopard，具体来说，是从当时还被称为 Mac OS X，版本号为  10.6.6 的系统版本，苹果开始为 macOS 提供统一的应用商店，Mac App Store。</p><p>也是从那个时候开始，macOS 越来越多地得到，原本一母同胞的小兄弟，iOS 的特性。</p><p><img src="https://blog.yingtaoxianbao.com/img/202012/apk&dmg-2.jpg" alt="apk&amp;dmg-2"></p><p>不过，相比封闭而年轻的 iOS，macOS 毕竟是更为自由、强大，也更有历史的桌面操作系统。更何况 Mac App Store 自身的体验也相当一般，毛病众多，所以，在 macOS 上，传统的软件安装方式仍然被广泛使用中。</p><p>具体来说，多数软件会提供 dmg 或 pkg 格式的安装包。</p><h2 id="dmg"><a href="#dmg" class="headerlink" title="dmg"></a>dmg</h2><p>dmg 是苹果的压缩镜像文件，类似于 Windows 下的 ISO。</p><p>它是 macOS 应用软件通用的打包格式，里面一般包含“应用程序名.app”的图标和一个应用程序文件夹（/Applications）快捷方式。</p><p>直接将图标拖曳至应用程序文件夹，即可完成安装。</p><p>想要卸载应用，也非常简单绿色，多数时候直接在 Launchpad 或 Applications 目录下删除应用（文件夹）即可。</p><h2 id="pkg"><a href="#pkg" class="headerlink" title="pkg"></a>pkg</h2><p>pkg 属于系统级软件的安装程序，相当于 iOS 越狱后装的 deb，一般会修改系统配置，权限较高，类似 Windows 下的安装程序 .exe 和 .msi。</p><p>pkg 安装一般要求 sudo 授权，卸载 pkg 安装的应用也比较麻烦。</p><p>对于这种软件，除了其自身可能提供的卸载程序，我们还可以借助第三方软件，如 <a href="https://cleanmymac.com">CleanMyMac</a>、<a href="https://freemacsoft.net/appcleaner/">AppCleaner</a> 等来彻底卸载删除。</p><h2 id="mpkg"><a href="#mpkg" class="headerlink" title="mpkg"></a>mpkg</h2><p>pkg 是单个应用程序的安装包，而 mpkg（multi pkg）则是多个 pkg 。</p><p>最经常见到的是 macOS 自身的安装器文件，如果你打开从 Mac App Store 下载的“macOS High Sierra.app”，就可以看到一个 .mpkg 文件，其中有着系统安装包主体的文件。</p><h2 id="结语"><a href="#结语" class="headerlink" title="结语"></a>结语</h2><p><img src="https://blog.yingtaoxianbao.com/img/202012/apk&dmg-3.png" alt="apk&amp;dmg-3"></p><p>除了使用 dmg、pkg 格式的软件包来安装软件，作为与 *UNX 有着深厚历史渊源，并且拥有众多程序员用户的操作系统，macOS 下也有着优秀的软件包管理工具 —— MacPorts 和 Homebrew。</p><p>通过它们，专业用户可以方便地下载、安装和管理丰富的开源软件。</p><p>而那，同样是一个迷人的生态，有机会再做介绍吧。</p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;&lt;img src=&quot;https://blog.yingtaoxianbao.com/img/202012/apk&amp;dmg-1.jpg&quot; alt=&quot;apk&amp;amp;dmg-1&quot;&gt;&lt;/p&gt;
+&lt;p&gt;从 Snow Leopard，具体来说，是从当时还被称为 Mac OS
+        
+      
+    
+    </summary>
+    
+    
+    
+      <category term="research" scheme="http://miaoz.me/tags/research/"/>
+    
+      <category term="macOS" scheme="http://miaoz.me/tags/macOS/"/>
+    
+      <category term="Apple" scheme="http://miaoz.me/tags/Apple/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>巴德尔-迈因霍夫现象：这妹妹我曾见过</title>
+    <link href="http://miaoz.me/2018/01/17/baader-meinhof-phenomenon/"/>
+    <id>http://miaoz.me/2018/01/17/baader-meinhof-phenomenon/</id>
+    <published>2018-01-17T15:40:00.000Z</published>
+    <updated>2020-12-22T11:02:00.733Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="这个妹妹我昨天见过"><a href="#这个妹妹我昨天见过" class="headerlink" title="这个妹妹我昨天见过"></a>这个妹妹我昨天见过</h2><p>在《红楼梦》中，贾宝玉见林黛玉，一个直呼“这个妹妹我曾见过”，一个心想“何等眼熟到如此”，盖因为他们是真见过，虽然那是前世。</p><p>生活中，你一定也不乏这种体验。</p><p>当你得知了一个新的信息，例如某个单词、概念、产品，甚至八卦等等，不久之后你就会有机会与之再次相遇。 </p><p>当你听到一首好歌，然后仿佛到处都在放这首歌；</p><p>当你得知了某个明星的八卦，顿时就发现许多人都在热烈地讨论着它；</p><p>当你或者身边某个朋友买了某个品牌的汽车，好像整条街上跑的都是这个品牌的车；</p><p>类似的还有一种，看时间的时候，经常会发现都是 11:11 或者 12:12？</p><p>……</p><p>这就是<strong><a href="http://wikibin.org/articles/baader-meinhof-phenomenon.html">巴德尔-迈因霍夫现象（Baader-Meinhof Phenomenon）</a></strong>。</p><h2 id="巴德尔-迈因霍夫现象"><a href="#巴德尔-迈因霍夫现象" class="headerlink" title="巴德尔-迈因霍夫现象"></a>巴德尔-迈因霍夫现象</h2><p><img src="https://blog.yingtaoxianbao.com/img/202012/baader-meinhof-1.jpg" alt="baader-meinhof-1"></p><blockquote><p>这个现象最初是 1986 年由 St. Paul Pioneer Press 的读者 Terry Mullen 提出的，他写信给一个专门收集搞笑事的栏目（Bulletin Board），提及了一件事，说他第一次听说“巴德尔和迈因霍夫集团”（德国恐怖组织“赤色军团”），很快又从另一个渠道很巧合地碰到了这个词。这个故事刊登后，读者不断提交经历过的类似事件，这个现象也因此被命名为“巴德尔-迈因霍夫现象” 。</p></blockquote><p>与被认为是“幻觉记忆”、“似曾相识”的<strong><a href="https://zh.wikipedia.org/zh-cn/既視感">既视感</a></strong>不同，巴德尔-迈因霍夫现象是你真的知道、听过、见过这个妹妹。</p><p><img src="https://blog.yingtaoxianbao.com/img/202012/baader-meinhof-2.jpg" alt="baader-meinhof-2"></p><p>而你对这个妹妹非常感兴趣，所以，你的注意力相比以前，更加地集中在了妹妹身上。</p><p>这是由人大脑的特性所决定的。心理学有一个说法，叫选择性注意（Selective attention），学渣就不班门弄斧了，这里有个有趣的<a href="http://v.youku.com/v_show/id_XMTcwMzQ1NjYw.html">实验视频</a>，可以看一看。</p><p>总之，如果我们将清醒时刻的每一分每一秒都分解开来，其实每一天，我们的大脑都将会接收到成千上万个事件。</p><p>人们的大脑不可能面面俱到地同等处理这些信息，而是会选择性地去关注自己感兴趣的事物。当大脑第一次发现一个事物，并且对它产生了兴趣，在之后的时间里便会更加注意这个事物，同时忽略其他不在意的事物。</p><p>巴德尔-迈因霍夫现象在品牌培养和产品销售中具有重要作用，而在学术上，它和心理学的共时性、人脑的模式识别等等也有一定关联，但门外汉如我已经决定不再深入。</p><p>见好就收。</p><h2 id="正能量收尾"><a href="#正能量收尾" class="headerlink" title="正能量收尾"></a>正能量收尾</h2><p><img src="https://blog.yingtaoxianbao.com/img/202012/baader-meinhof-3.jpg" alt="baader-meinhof-3"></p><p>如果你不想要这个妹妹，也非难事，只需不那么“留心”就行。</p><p>当然，这或许也会让你的生活变得更麻木乏味，或许，生活中还是需要一些随处可见的小小意外和惊喜，才会更好一些呢。</p><p>这里有一段故事分享：</p><p><img src="https://blog.yingtaoxianbao.com/img/202012/baader-meinhof-4.jpg" alt="baader-meinhof-4"></p><blockquote><p>有个人某天到北京的“翠微百货”去吃饭。过了两天，在翻阅《唐僧情史》时，“翠微”两个字让他仔细读了一首以前没注意的诗：“<em>有缘未必相逢，无情莫向翠微。人间一堕十劫，犹记桃花未归。</em>”</p></blockquote>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h2 id=&quot;这个妹妹我昨天见过&quot;&gt;&lt;a href=&quot;#这个妹妹我昨天见过&quot; class=&quot;headerlink&quot;
+        
+      
+    
+    </summary>
+    
+    
+    
+      <category term="research" scheme="http://miaoz.me/tags/research/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>机械降神和御都合主义</title>
+    <link href="http://miaoz.me/2018/01/16/deus-ex/"/>
+    <id>http://miaoz.me/2018/01/16/deus-ex/</id>
+    <published>2018-01-16T15:40:00.000Z</published>
+    <updated>2020-12-22T11:05:10.797Z</updated>
+    
+    <content type="html"><![CDATA[<p><img src="https://blog.yingtaoxianbao.com/img/202012/deus-ex-0.jpg" alt="deus-ex-0"></p><h2 id="大逆转中的机械降神"><a href="#大逆转中的机械降神" class="headerlink" title="大逆转中的机械降神"></a>大逆转中的机械降神</h2><p><img src="https://blog.yingtaoxianbao.com/img/202012/deus-ex-1.jpg" alt="deus-ex-1"></p><p>第一次意识到“机械降神”这个词并感到好奇，是看完《大逆转裁判2》流程，浏览玩家讨论的时候。</p><p>当时不少人吐槽福尔摩斯的最后登场，虽然很帅气吧，但过于夸张以至于超乎逻辑，其中就出现了“机械降神”这个评价。</p><p>那一瞬间，我自然而然就明白了这个词的用意，顺手在维基上一查。</p><p>Deus ex machina，这是个拉丁语词组（英译：God from the machine），意思是机关跑出的神（Deus 在拉丁语中泛指神），中文一般翻译为“舞台机关送神”、“机械降神”、“机器神”、“解围之神”等。</p><p>在古希腊戏剧，当剧情陷入胶着，困境难以解决时，突然出现拥有强大力量的神将难题解决，令故事得以收拾、有个好结局。当时，利用起重机或起升机的机关，将扮演神的下等演员载送至舞台上。</p><p>这种表演手法是人为的，制造出意料之外的剧情大逆转。如今，这种手法通常被评论家认为是不高明的说书技巧，因为它破坏了故事的内在逻辑，纵使有时候会为了这个理由而故意采用。</p><p>唔……果不其然啊。</p><p>然后，当我端详着 Deus ex，发现自己并不是第一次见到它。</p><p>仍然跟游戏有关，而且大大的有关。</p><h2 id="杀出重围是什么鬼"><a href="#杀出重围是什么鬼" class="headerlink" title="杀出重围是什么鬼"></a>杀出重围是什么鬼</h2><p><img src="https://blog.yingtaoxianbao.com/img/202012/deus-ex-2.jpg" alt="deus-ex-2"></p><p>Deus Ex（国内通常译作“杀出重围”，其实并不恰当）是以<strong>赛博朋克</strong>为主题的动作角色扮演及第一人称射击游戏系列。</p><p>故事设定于科技非常发达，义体强化普及的反乌托邦未来世界，主要集中在想要控制世界的秘密组织之间的冲突，以及超人类主义和科技所带来的影响。</p><p>游戏的核心，正是“人造之神”与“强大外力干涉”的故事。</p><p>强大跨国科技企业，以及类似光明会（illuminati）这样幕后组织，渗透入人类社会的各个角落，坐拥高端科技与财富，操纵影响着政治经济乃至于民众的生活，它们毫无疑问有着如神一般的力量和地位。</p><p>同时，黑科技所造就的，有着超能力一般的“义体强化人”也是对“人造之神”的又一个隐喻。</p><p>Deus Ex 是个好游戏，不过我们就暂时到这里。</p><h2 id="御都合主义"><a href="#御都合主义" class="headerlink" title="御都合主义"></a>御都合主义</h2><p><img src="https://blog.yingtaoxianbao.com/img/202012/deus-ex-3.jpg" alt="deus-ex-3"></p><p>回到<strong>机械降神</strong>的定义，我心中很快又浮现了另一个词语。</p><p>御都合主义（日语：ごつごうしゅぎ），原本是指没有主见或原则，行为随时机或场合改变的人。</p><p>如今，这个术语主要是指在创作作品中，为了让故事得以顺利进行，在剧情中安排了不自然或者不合理的发展，诸如吃书、超展开、不符合逻辑或没有伏笔的偶然等等。</p><p>《火影忍者》、《海贼王》、《名侦探柯南》……许多非常流行的、优秀的，尤其连载时间超长的作品都遭受过都合主义的批评。</p><p>而且，我也完全相信，不论古今中外，什么文艺作品，使用“机械降神”、“都合主义”，或者别的什么词，我们都曾经对某些作品有过相似的看法，这里就不再列举了。</p><h2 id="最后"><a href="#最后" class="headerlink" title="最后"></a>最后</h2><p><img src="https://blog.yingtaoxianbao.com/img/202012/deus-ex-4.jpg" alt="deus-ex-4"></p><p>创作无疑是一件伟大的事情，伟大不易造就，所以创作者自有其困境。</p><p>如何把握无巧不成书和弄巧成拙之间的微妙，对于每个创作者、乃至于每一次创作都是一次严峻的考验。</p><p>而作为读者和观众，对于优秀的作品，你可以微笑着欣赏，也可以举高高吹爆！是的，《大逆转裁判》和《Deus Ex》都是好游戏啊好游戏！</p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;&lt;img src=&quot;https://blog.yingtaoxianbao.com/img/202012/deus-ex-0.jpg&quot; alt=&quot;deus-ex-0&quot;&gt;&lt;/p&gt;
+&lt;h2 id=&quot;大逆转中的机械降神&quot;&gt;&lt;a href=&quot;#大逆转中的机械降神&quot;
+        
+      
+    
+    </summary>
+    
+    
+    
+      <category term="research" scheme="http://miaoz.me/tags/research/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>地球在哪里</title>
+    <link href="http://miaoz.me/2018/01/15/earth/"/>
+    <id>http://miaoz.me/2018/01/15/earth/</id>
+    <published>2018-01-15T15:00:00.000Z</published>
+    <updated>2020-12-22T11:08:20.927Z</updated>
+    
+    <content type="html"><![CDATA[<p><img src="https://blog.yingtaoxianbao.com/img/202012/earth-00.jpg" alt="earth-00"></p><h2 id="太阳系"><a href="#太阳系" class="headerlink" title="太阳系"></a>太阳系</h2><p><img src="https://blog.yingtaoxianbao.com/img/202012/earth-1.jpg" alt="earth-1"></p><p>首先，地球是太阳系中由内及外的<strong>第三颗行星</strong>，距离太阳约 1.5 亿千米。</p><p>太阳系是一个受太阳引力约束在一起的系统，包括太阳以及直接或间接围绕太阳运动的天体。在直接围绕太阳运动的天体中，最大的八颗被称为行星，其余的天体要比行星小很多，比如矮行星、太阳系小行星和彗星。</p><p>太阳系位于<strong>银河系猎户臂</strong>的内侧边缘，与银河系中心的距离约 26,000 光年。</p><h2 id="银河系"><a href="#银河系" class="headerlink" title="银河系"></a>银河系</h2><p><img src="https://blog.yingtaoxianbao.com/img/202012/earth-2.png" alt="earth-2"></p><p>银河系是一个直径介于 100,000 光年至 180,000 光年的棒旋星系。估计拥有 1,000 亿至 4,000 亿颗恒星，并可能有 1,000亿颗行星存在于银河系内。</p><p>猎户臂是银河系内的一条小螺旋臂，地球所在的太阳系即处于猎户臂内。它也被称为本地臂、本地分支（Local Spur）或猎户分支。</p><p>猎户臂因为靠近猎户座而得名，它位于人马臂和英仙臂之间 （银河系 4 条主要螺旋臂中的 2 条）。</p><p>银河系有几个卫星星系，它们都是<strong>本星系群</strong>的成员。</p><h2 id="本星系群"><a href="#本星系群" class="headerlink" title="本星系群"></a>本星系群</h2><p><img src="https://blog.yingtaoxianbao.com/img/202012/earth-3.png" alt="earth-3"></p><p>本星系群（英文：Local Group），是包括地球所处之银河系在内的一群星系。</p><p>这组星系群包含大约超过 50 个星系，其重心位于银河系和仙女座星系之间的某处。本星系群中的全部星系覆盖一块直径大约 1000 万光年的区域。</p><p>本星系群又属于范围更大的<strong>室女座超星系团</strong>。</p><h2 id="室女座超星系团"><a href="#室女座超星系团" class="headerlink" title="室女座超星系团"></a>室女座超星系团</h2><p><img src="https://blog.yingtaoxianbao.com/img/202012/earth-4.gif" alt="earth-4"></p><p>室女座超星系团（Virgo Supercluster，简称 Virgo SC）或本超星系团（Local Supercluster，简称 LSC 或 LS）是个不规则的超星系团，包含银河系和仙女座星系所属的本星系群在内，至少有 100 个星系团与星系群聚集在直径 33 百万秒差距（1 亿 1 千万光年）的空间内，是在可观测宇宙中数以百万计的超星系团中的一个。</p><p>该星系团的中心区域距离地球约有 6000 万光年，位于室女座，著名的梅西耶天体 M49、M60、M86、M87 均位于此。</p><p>然后呢，室女座超星系团又是<strong>拉尼亚凯亚超星系团</strong>的一部分。</p><h2 id="拉尼亚凯亚超星系团"><a href="#拉尼亚凯亚超星系团" class="headerlink" title="拉尼亚凯亚超星系团"></a>拉尼亚凯亚超星系团</h2><p><img src="https://blog.yingtaoxianbao.com/img/202012/earth-5.png" alt="earth-5"></p><p>拉尼亚凯亚超星系团（Laniakea），是银河系、太阳系和地球所处的超星系团。</p><p>2014 年 9 月，夏威夷大学的布伦特·塔利（Brent Tully）和法国里昂第一大学的海伦·库尔图瓦（Helene Courtois）所领导的团队发表了一种通过星系的视向速度来定义超星系团的新方法，并由此定义了拉尼亚凯亚。</p><p>按照这一定义，室女座超星系团只是拉尼亚凯亚的一部分而已。</p><p>拉尼亚凯亚超星系团内包含约 10 万个星系，范围达到约 1.59 亿秒差距（5.2 亿光年），它的质量大约是银河系的 10 万倍。</p><p>超星系团是宇宙中最大的结构之一，并且其边缘难以判断，尤其是由内向外观测时。发现拉尼亚凯亚的团队使用电波望远镜将本星系群的星系运动绘制成分布图。</p><p>拉尼亚凯亚（Laniakea）这个词来自于夏威夷语，意为“无尽的天堂”，这个名称是向利用天文知识在太平洋中航行的波利尼西亚人致敬。</p><h2 id="最后"><a href="#最后" class="headerlink" title="最后"></a>最后</h2><p>现在，如果你在宇宙中迷了路，知道怎么跟外星警察叔叔说家在哪里了么？</p><p>假如你们没有语言障碍的话。</p><p>于是，感觉自己又知道了一点。</p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;&lt;img src=&quot;https://blog.yingtaoxianbao.com/img/202012/earth-00.jpg&quot; alt=&quot;earth-00&quot;&gt;&lt;/p&gt;
+&lt;h2 id=&quot;太阳系&quot;&gt;&lt;a href=&quot;#太阳系&quot; class=&quot;headerlink&quot;
+        
+      
+    
+    </summary>
+    
+    
+    
+      <category term="research" scheme="http://miaoz.me/tags/research/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>一个聪明人的洞见：锤子定律</title>
+    <link href="http://miaoz.me/2018/01/14/hammer/"/>
+    <id>http://miaoz.me/2018/01/14/hammer/</id>
+    <published>2018-01-14T15:30:00.000Z</published>
+    <updated>2020-12-22T11:15:27.113Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="工具规律"><a href="#工具规律" class="headerlink" title="工具规律"></a>工具规律</h2><p><img src="https://blog.yingtaoxianbao.com/img/202012/hammer-0.jpg" alt="hammer-0"></p><p>也许你听过这样一句类似的话：</p><blockquote><p>“如果你手里拿着一把锤子，看什么就都会像钉子。”</p></blockquote><p>这一概念也被称作工具定律、锤子定律、马斯洛的锤子或者金锤子等等，意为对一种工具、技能或者思考方式的过度依赖，被其所局限。</p><p>然而现实总归是复杂的，某些工具可能可以适用多个场合，然而绝大多数工具都只为了特定的目的而被创造。</p><p>当然，今天我们关心的是这个说法的出处。</p><h2 id="一点考据"><a href="#一点考据" class="headerlink" title="一点考据"></a>一点考据</h2><p><img src="https://blog.yingtaoxianbao.com/img/202012/hammer1.jpg" alt="hammer1"></p><p>该概念最早有确切记录，是由哲学家阿夫拉姆·卡普兰（Abraham Kaplan）在 1964 年第一次提出的：</p><blockquote><p>“我把它称为工具定律，它可以这样具体的表述：给一个小男孩一个锤子，然后他会发现所有他遇到的事物都需要敲打。”</p></blockquote><p>此后，1966 年时心理学家亚伯拉罕·马斯洛在其发行的《科学的心理学》一书中提到：</p><blockquote><p>“我认为假设你所拥有的工具只有一个锤子时，你把所有的事物当作钉子来对待是很有吸引力的。”</p></blockquote><p>值得注意的是，马斯洛的另一个更著名的洞见是提出了<a href="https://zh.wikipedia.org/zh-cn/需求层次理论">需求层次理论</a>。</p><p>继续往前追溯的话，锤子和钉子的比喻最初可能并不是来自于卡普兰或马斯洛。英文俚语”a Birmingham screwdriver”的意思是一个（伯明翰）锤子，引申为一种对所有目的都是用一种工具的习惯。</p><p>这个表达方式在卡普兰和马斯洛至少一个世纪之前就存在了，有些人认为这一观点是由马克·吐温提出的，然而在其发表的文本中似乎并没有得到佐证。</p><p>1868 年，一本伦敦期刊《Once a Week》曾刊载：</p><blockquote><p>“给一个男孩一把锤子和一个凿子，告诉他怎么用，然后他就会开始入门撬窗，直到你教他如何更好的使用，并且限制他的活动范围。”</p></blockquote><p>此外，在“巴鲁克观察”的名义下，该观点又由股市观察家及作家伯纳德·巴鲁克所提出。</p><p><img src="https://blog.yingtaoxianbao.com/img/202012/hammer2.jpg" alt="hammer2"></p><p>事实上，远不止以上几位，这一概念已经在多个领域为许多人提出过，据说著名投资人、巴菲特的合伙人查理·芒格，也非常喜欢把这话挂在嘴边。</p><h2 id="相关概念"><a href="#相关概念" class="headerlink" title="相关概念"></a>相关概念</h2><p><img src="https://blog.yingtaoxianbao.com/img/202012/hammer3.jpg" alt="hammer3"></p><p>其他一些狭义上的工具主义概念：</p><p>“déformation professionnelle”：一个法语术语，意为从一个人所专的角度去看待事物。</p><p>“egulatory capture”：管理者会产生一种从他们专长的管理角度去看待事物的趋势。</p><p>在编程领域，“金锤子”或者“把一个熟悉的技术或理念强迫的应用于大量的软件问题上”的概念已经被认为是一种<a href="https://zh.wikipedia.org/wiki/反面模式">反模式</a>，这是一种编程时应该避免的实践。</p><p>可见，正和锤子定律以及相关概念相反，许多事实却有其共同之处（关键是程度），而聪明人对世界的洞见也都是相通的。</p><p>于是，感觉自己又知道了一点。</p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h2 id=&quot;工具规律&quot;&gt;&lt;a href=&quot;#工具规律&quot; class=&quot;headerlink&quot; title=&quot;工具规律&quot;&gt;&lt;/a&gt;工具规律&lt;/h2&gt;&lt;p&gt;&lt;img
+        
+      
+    
+    </summary>
+    
+    
+    
+      <category term="research" scheme="http://miaoz.me/tags/research/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>一万个小时定律和髓鞘质</title>
+    <link href="http://miaoz.me/2018/01/12/myelin/"/>
+    <id>http://miaoz.me/2018/01/12/myelin/</id>
+    <published>2018-01-12T14:30:00.000Z</published>
+    <updated>2020-12-22T10:58:02.076Z</updated>
+    
+    <content type="html"><![CDATA[<p><img src="https://blog.yingtaoxianbao.com/img/202012/myelin-0.jpg" alt="myelin-0"></p><p>很多人都知道<strong>“一万个小时定律”</strong>：在任何领域专心练习一万个小时，你就能成为该领域的大师。</p><p><img src="https://blog.yingtaoxianbao.com/img/202012/myelin-1.png" alt="myelin-1"></p><p>这话听起来很鸡汤并且充满煽动性，它源于一本书<a href="https://book.douban.com/subject/4726323/">「一万个小时天才理论」</a>，所以书卖得很好，该理论也流传很广。</p><p>当然，事情永远都不会那么简单。</p><p>并不是随随便便将一件事情重复上万遍，你就能成为大师。</p><p>不同人的智商和训练效率等都有着无法忽略的差距，而且，<strong>刻意练习（Deliberate Practice）</strong>更是习得高超技能的关键。</p><p><img src="https://blog.yingtaoxianbao.com/img/202012/myelin-2.jpg" alt="myelin-2"></p><p>事实上，一万个小时理论被提出后，质疑的声音就不绝于耳。关于这些，有<a href="https://book.douban.com/subject/26895993/">一本书</a>受到许多学习者的推崇，值得一读。</p><p>但今天并不讨论这个理论，我们要讨论的是，该理论的科学依据：</p><p><a href="https://zh.wikipedia.org/zh-cn/髓磷脂"><strong>髓鞘质</strong></a>。</p><h2 id="不明白但是很厉害的理论"><a href="#不明白但是很厉害的理论" class="headerlink" title="不明白但是很厉害的理论"></a>不明白但是很厉害的理论</h2><p><img src="https://blog.yingtaoxianbao.com/img/202012/myelin-3.png" alt="myelin-3"></p><p>髓鞘质（Myelin），是一种包覆于生物神经纤维外的绝缘脂质。</p><p>髓鞘化（Myelination）是指髓鞘发展的过程，它使神经兴奋在沿神经纤维传导时速度加快，并保证其定向传导，是新生儿的神经系统发展必不可少的过程。</p><p>髓鞘化是形成记忆的一种方式，能增强细胞组织间的连接。“轻车熟路”、“孰能生巧”等就是髓鞘化的结果。</p><p>以下是髓鞘质的一些特点：</p><ul><li>所有的动作都是神经纤维间沟通的结果；</li><li>髓鞘质越厚，绝缘性越强，我们的动作和思维就越加精确和敏捷；</li><li>与无髓鞘质的神经线路相比，最高可使信号处理能力提高 3000 倍；</li><li>髓鞘质是不断生长和变化的，直到五十岁以后，损失速度超过生长速度。</li></ul><h2 id="由此诞生的假说"><a href="#由此诞生的假说" class="headerlink" title="由此诞生的假说"></a>由此诞生的假说</h2><p><img src="https://blog.yingtaoxianbao.com/img/202012/myelin-4.jpg" alt="myelin-4"></p><p>髓鞘质是<strong>“交流、阅读、学习技能、人之成为人的关键”</strong>，技能（才能）的密码就是髓鞘质。</p><p>形象地说，一个人的某项技能就好比其大脑神经的一条魔术回路（大雾），而髓鞘质就是包裹这条回路的物质。</p><p>通过成千上万个小时的刻意练习，这个包裹着神经回路的物质会越厚，绝缘性越强，传导的神经信息越精确迅速，人的即时反应能力也就越强，并最终展现为出类拔萃的、大师级的高超技能。</p><p><img src="https://blog.yingtaoxianbao.com/img/202012/myelin-5.jpg" alt="myelin-5"></p><p>但这还没完，当你通过艰苦卓绝的练习形成一项娴熟技能的回路后，还需要持之以恒地练习，以此维护和壮大它。</p><p>如果有一条回路你太久没有激发、加固，那它就有可能会消失，就仿佛你以往所有的努力不曾存在一样。</p><p>著名钢琴家弗拉基米·霍洛维茨坚持练习弹琴直到 80 多岁，他说：“如果我一天不练，自己会知道；如果两天不练，妻子就会知道；如果三天不练，全世界都知道了。”</p><p>看，智人这个物种从生理上就决定了，只有痛苦，才是卓越的养分！</p><p>于是，我再也不相信任何轻易获得的东西。</p><p><img src="https://blog.yingtaoxianbao.com/img/202012/myelin-6.jpg" alt="myelin-6"></p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;&lt;img src=&quot;https://blog.yingtaoxianbao.com/img/202012/myelin-0.jpg&quot;
+        
+      
+    
+    </summary>
+    
+    
+    
+      <category term="research" scheme="http://miaoz.me/tags/research/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>吃饭的革命</title>
+    <link href="http://miaoz.me/2017/07/17/self-feeding/"/>
+    <id>http://miaoz.me/2017/07/17/self-feeding/</id>
+    <published>2017-07-17T14:00:00.000Z</published>
+    <updated>2020-12-22T10:53:27.817Z</updated>
+    
+    <content type="html"><![CDATA[<p><img src="https://blog.yingtaoxianbao.com/img/202012/feeding-00.jpg" alt="feeding-00"></p><blockquote><p>本文适合单身人士阅读。</p></blockquote><p>偶尔听的 Podcast 中，有一档美食播客，叫<a href="https://ipn.li/weizhidao">「味之道」</a>。</p><p>其中某一期，主播们随口谈起，如果一个人对「吃」不在意、不讲究，就会感觉这个人没意思，不值得交朋友。</p><p>颇以为然。</p><p>能够欣赏食物的人，必然是有趣的。</p><p>「饮食男女，人之大欲存焉」，吃可以是一件很有趣、很享受的事情。</p><p>然而，并非时刻都如此。</p><h2 id="吃饭的问题大了"><a href="#吃饭的问题大了" class="headerlink" title="吃饭的问题大了"></a>吃饭的问题大了</h2><p><img src="https://blog.yingtaoxianbao.com/img/202012/feeding-01.gif" alt="feeding-01"></p><p>我们都知道，吃饭这事儿给我们带来的麻烦可不少。</p><p>如果自己做饭，从买菜到洗碗，一餐花费两小时应该不算夸张。早餐打个折扣，一天下来有四五个小时要消耗在这上头。</p><p>人每天都得吃饭，但你不可能每天都乐意、且能够这样花几个小时在吃饭上吧。</p><p>除非你有一个劳动力固定分配到家务上。</p><p>所以三餐都自己做，从如今城市人的生活状态和节奏来说，不太现实。</p><p>现实的解决方案是下馆子或者外卖。</p><p><img src="https://blog.yingtaoxianbao.com/img/202012/feeding-02.jpg" alt="feeding-02"></p><p>甚至这才是现代社会分工中，大多数城市人的常态。</p><p>只是这固然让我们少花了时间，但也带来了新的问题：卫生、味道，以及，吃上饭的时间。</p><p>事实上，不单单外卖会延误、下馆子会吃到虫子，哪怕自己下厨，也有可能放多了盐。</p><p>总而言之，因为食品不是一种标准化的工业产品，很多时候，吃饭就是一件在任何一个环节都有可能失控的事。</p><h2 id="饮食的意义"><a href="#饮食的意义" class="headerlink" title="饮食的意义"></a>饮食的意义</h2><p><img src="https://blog.yingtaoxianbao.com/img/202012/feeding-03.gif" alt="feeding-03"></p><p>虽然都是吃饭。</p><p>但不同的情境下，吃饭的意义其实大不一样。</p><p>有时候是生理需求；</p><p>有时候是享受美食；</p><p>有时候更多是为了与人交际。</p><p>老实说，哪种情况多一些？</p><p>尽管我们有因为某道菜、某个餐厅，奔波排队，甘之如饴的时候，又或约上一群小伙伴，聊天吹水，谈笑风生的时候。</p><p>但更多时候，我们只是为了填饱肚子。</p><p>说起来有点惨，不过当我们专注于工作、看剧、小说，或者某个 Boss ——</p><p>真的只想填饱肚子啊！</p><p>所以，你是否同意，排除偶尔对美食和社交的需求，我们的日常饮食是功能性质的？</p><p>这一点很重要。</p><h2 id="重新设计食物的样子"><a href="#重新设计食物的样子" class="headerlink" title="重新设计食物的样子"></a>重新设计食物的样子</h2><p><img src="https://blog.yingtaoxianbao.com/img/202012/feeding-04.jpg" alt="feeding-04"></p><p>方便、快速、健康、稳定地填饱肚子。</p><p>这就是城市人，或者说社畜，对食物的需求。</p><p>满足了这些需求，倒也不妨碍追求口味，但那已经是消费升级的事情了。</p><p>据说，米其林评价星级餐厅有一项重要的标准是「料理的稳定性」。如果让我重新设计食物，在保证不难吃的基础上，稳定一定是极其重要的。</p><p>而这恰恰是大部分一般人能去的街头馆子、外卖小店所无法保证的。</p><p>不但料理的稳定性无法保证，服务的稳定性也每每堪忧。</p><p>那么，谁能保证符合需求？</p><p><img src="https://blog.yingtaoxianbao.com/img/202012/feeding-05.jpg" alt="feeding-05"></p><p>当我得知 <a href="https://www.soylent.com">「Soylent」</a>的时候，真的是欣喜若狂，因为其完全符合我对现代食品的期待。</p><p>你再也不用东市买骏马，西市买鞍鞯，南市买辔头，北市买长鞭，然后柴米油盐，煎炒煮炸，用尽十八般武艺整出两菜一汤来；</p><p>也不用抱着忐忑的心走入新开的馆子，皱着眉头打量沾着油渍的菜单，盘算了十分钟后谨慎地点了两道最平庸的菜，然后听天由命；</p><p>更加不用大众点评、美团、饿了么齐上阵，在眼花缭乱的沙县小吃、黄焖鸡、蛋包饭、麦当劳、吉野家和千尊披萨中挑选，然后祈祷你的骑手今儿一路顺风。</p><p>现在，你只需要：</p><p>打三勺粉末，加数百毫升水，打散摇匀，喝掉。</p><p>OK，你获得正常成年人一顿饭<a href="http://www.ruffood.com/diy/info/id/15138.html">所需要的一切</a>，包括碳水化合物、蛋白质、维生素、脂肪等等。</p><p>有比这更简单的么？</p><p>有，Soylent 2.0（是的，这种食品有版本号，像软件工程一样迭代）后推出了瓶装版（Drink &amp; Cafe），开盖即饮。</p><p>也许代餐早已不新鲜，但 Soylent 用击中人心的理念革新了这项生意。</p><p>或者我们可以说，Soylent 重新发明了代餐。(:</p><p>当然，基于现实的原因，我成为了其国内模仿者<a href="http://www.ruffood.com">「若饭」</a>的拥趸。</p><p><img src="https://blog.yingtaoxianbao.com/img/202012/feeding-06.jpg" alt="feeding-06"></p><p>今年五月发售的瓶装版味道相当不错哦。</p><p>不管怎么说，Soylent 和若饭给了我们一个可以把吃饭的所有步骤纳入掌控的选择。</p><p>它们完全符合我对功能性食物的想象。</p><h2 id="走向未来，走向硅基"><a href="#走向未来，走向硅基" class="headerlink" title="走向未来，走向硅基"></a>走向未来，走向硅基</h2><p><img src="https://blog.yingtaoxianbao.com/img/202012/feeding-07.jpg" alt="feeding-07"></p><p>如若饭之类的代餐粉自然有其缺陷。</p><p>例如，口味未必适合所有人，引得某些人痛心疾首地批判。</p><p>缺乏咀嚼感，甚至还会引发部分人的食物过敏。</p><p>但是，就如同 Soylent 自己声称的那样：「It’s not intended to replace every meal, but it can replace any meal」。</p><p>在某些时刻，它们足够管用，而这些问题，也都可以最终被解决。</p><p><img src="https://blog.yingtaoxianbao.com/img/202012/feeding-08.jpg" alt="feeding-08"></p><p>Soylent 和若饭都在不断改善配方，并且推出多种形态和口味的产品。</p><p>关键在于，我们需要食品以工业的、标准化的、现代的面目呈现。</p><p>而 Soylent 和若饭做到了。</p><p>虽然相比于脑后插管，它们其实还是落后很多。</p><p>在可以模拟任何食材味道信息的未来，食物本身是什么已不再重要，是吧？</p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;&lt;img src=&quot;https://blog.yingtaoxianbao.com/img/202012/feeding-00.jpg&quot;
+        
+      
+    
+    </summary>
+    
+    
+    
+  </entry>
+  
+  <entry>
     <title>我们为何表达</title>
     <link href="http://miaoz.me/2017/07/10/why-express/"/>
     <id>http://miaoz.me/2017/07/10/why-express/</id>
@@ -60,6 +286,31 @@
         
         
           &lt;p&gt;&lt;img src=&quot;https://blog.yingtaoxianbao.com/img/202012/why-express-00.jpg&quot;
+        
+      
+    
+    </summary>
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title>来都来了？我现在就走！</title>
+    <link href="http://miaoz.me/2017/06/19/why-not/"/>
+    <id>http://miaoz.me/2017/06/19/why-not/</id>
+    <published>2017-06-19T15:00:00.000Z</published>
+    <updated>2020-12-22T10:47:19.668Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="朴素而无敌的思路"><a href="#朴素而无敌的思路" class="headerlink" title="朴素而无敌的思路"></a>朴素而无敌的思路</h2><p><img src="https://blog.yingtaoxianbao.com/img/202012/why-not-00.jpg" alt="why-not-00"></p><blockquote><p>“来都来了。”</p></blockquote><p>这么一句话，你一定听过甚至讲过。</p><p><strong>场景一：</strong></p><p>做了两个小时车，排了一个小时队，去看某个展览，结果一到地方很快大失所望。但是，来都来了。</p><p><strong>场景二：</strong></p><p>空着肚子驱车一个小时到某个可疑的地方面试，结果被告知负责面试的主管临时有事出门必须等至少俩小时。一边忍耐饥饿一边漫无边际的等待。但是，来都来了。</p><p><strong>场景三</strong></p><p>网上看到某大V发了条色香味俱全的长微博（或者公众号），非常用力地推某个产品，兴匆匆下单。几天后快递送上门，不说货不对版，也是图片仅供参考。但是，买都买了。</p><p>毫无疑问，人们绝不会在非常高兴地情况下说出这句话。</p><p>但它仿佛是一种咒语，蕴含有一种朴素又无敌的魔力。一旦有人说出口，其他人就只能跪下屈服：好的，你赢了。</p><h2 id="沉没成本和损失厌恶"><a href="#沉没成本和损失厌恶" class="headerlink" title="沉没成本和损失厌恶"></a>沉没成本和损失厌恶</h2><p><img src="https://blog.yingtaoxianbao.com/img/202012/why-not-01.jpg" alt="why-not-01"></p><blockquote><p>在经济学和商业决策制定过程中，会用到“沉没成本（Sunk Cost）”的概念，代指已经付出且不可收回的成本。</p></blockquote><p>仔细体会这句话背后的逻辑，思考我们为何惯于忍耐妥协的时候，不免会想起一个概念：沉没成本。</p><p>人们常常耽于已经付出的代价，不但忍受现状，无法及时止损退出，严重的甚至一步步越陷越深。</p><p>当话题进一步扩散，我们发现这种思维误区可以举的例子就更多了。</p><p>排队、相亲、看电影、谈恋爱、炒股……甚至传销洗脑，只要是我们投入时间、金钱、情感、精力的地方，都可能会发生不够理性的决策。</p><p>为何？</p><p>人们讨厌损失远远超过获益（损失厌恶），并且会高估自己所拥有事物的价值（禀赋效应），更何况一般人多少有乐观倾向，常常抱有侥幸心理。</p><p>所以哪怕是在有的选的情况下，人们还是更多倾向于一条路走到黑。</p><h2 id="逃出你的肖申克"><a href="#逃出你的肖申克" class="headerlink" title="逃出你的肖申克"></a>逃出你的肖申克</h2><p><img src="https://blog.yingtaoxianbao.com/img/202012/why-not-02.jpg" alt="why-not-02"></p><blockquote><p>“Don’t cry over the spilt milk.”</p></blockquote><p>也许你会认为，排个队买个货，归根到底都是一种无足轻重的选择，所以人们无所谓做出不足够理智的选择。</p><p>当生死攸关或者面临重大的利益，人们自然能够两权相害取其轻，现实生活中也没有几个不撞南墙不回头的二愣子。</p><p>事实上呢？</p><p>是的，人们往往经过痛苦纠结，权衡利弊……</p><p>然后还是做出错误的决策。</p><p>许多人会过分高估自己的理性。</p><p>理性是一种极其有限的资源，而现实又是一个纷繁复杂的庞大系统。在真实的情景中，我们往往看不清未来，算不清利弊，自然也就没办法做出「正确」的判断了。</p><p>所以，往往就只能保守地屈服于思维的惯性。</p><p>就如同「治大国如烹小鲜」之所以高明，是因为现实往往是治丝而棼。智慧理性为何深受推崇，是因为人们往往愚昧冲动。</p><p>真实世界不是经济学模型，但是意识到心智和理性的力量毫无疑问是有价值的。毕竟，无法更改的过去不应干涉我们当下乃至未来的决策。</p><p>来都来了？</p><p>那又如何，我现在就走！</p><h2 id="林中之象"><a href="#林中之象" class="headerlink" title="林中之象"></a>林中之象</h2><p><img src="https://blog.yingtaoxianbao.com/img/202012/why-not-03.jpg" alt="why-not-03"></p><blockquote><p>独步天下，吾心自洁，无欲无求，如林中之象。</p></blockquote><p>在每一个逝去的日子里，我们增长经验，也愈发被束缚。</p><p>如果只是偶尔不理性还好，更可怕的是，我们几乎无法避免自己变得越来越顽固盲目。</p><p>量子力学的创始人，马克斯·普朗克年轻的时候吐槽“ 要接受一个新的科学真理，并不用说服它的反对者，而是等到反对者们都相继死去”，当他老了，也果然成了量子力学进步思想的反对者。当然，保守派当中甚至还包括爱因斯坦。</p><p>连依靠理性和逻辑吃饭的科学家都无法摆脱过去的枷锁，更何况普通人呢？</p><p>好在，理性的火焰一旦点燃，时时拂拭添油，就不会轻易熄灭。因此，我们可以仗之行走于现实的幽暗。</p><p>一直很喜欢禅宗一个著名的公案：慧能与神秀之争。</p><p>在我看来，这是天才与凡人道路的分别。</p><p>天才只能供着称宗作祖，而凡人点滴积累的修行，才值得我们效仿。</p><p>如何才能逃出自己的思维误区？</p><p>我想不出比时刻保持自我审视更好的办法了。</p><p>正所谓：</p><p>“身是菩提树，心如明镜台。时时勤拂拭，莫使惹尘埃。”</p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h2 id=&quot;朴素而无敌的思路&quot;&gt;&lt;a href=&quot;#朴素而无敌的思路&quot; class=&quot;headerlink&quot; title=&quot;朴素而无敌的思路&quot;&gt;&lt;/a&gt;朴素而无敌的思路&lt;/h2&gt;&lt;p&gt;&lt;img
         
       
     

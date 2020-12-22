@@ -13,11 +13,11 @@
 <link rel="stylesheet" href="/css/main.css">
 
 
-<link rel="stylesheet" href="/lib/font-awesome/css/font-awesome.min.css">
+<link rel="stylesheet" href="/lib/font-awesome/css/all.min.css">
 
 <script id="hexo-configurations">
     var NexT = window.NexT || {};
-    var CONFIG = {"hostname":"miaoz.me","root":"/","scheme":"Muse","version":"7.7.1","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}}};
+    var CONFIG = {"hostname":"miaoz.me","root":"/","scheme":"Muse","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}}};
   </script>
 
   <meta name="description" content="网路无限宽广。">
@@ -37,8 +37,9 @@
   // https://hexo.io/docs/variables.html
   CONFIG.page = {
     sidebar: "",
-    isHome: true,
-    isPost: false
+    isHome : true,
+    isPost : false,
+    lang   : 'zh-cn'
   };
 </script>
 
@@ -92,14 +93,12 @@
 
   <div class="site-meta">
 
-    <div>
-      <a href="/" class="brand" rel="start">
-        <span class="logo-line-before"><i></i></span>
-        <span class="site-title">饮水琐话</span>
-        <span class="logo-line-after"><i></i></span>
-      </a>
-    </div>
-        <p class="site-subtitle">生活如饮水，甘苦悉具，冷暖自知。</p>
+    <a href="/" class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <h1 class="site-title">饮水琐话</h1>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+      <p class="site-subtitle" itemprop="description">生活如饮水，甘苦悉具，冷暖自知。</p>
   </div>
 
   <div class="site-nav-right">
@@ -109,22 +108,26 @@
 </div>
 
 
+
+
 <nav class="site-nav">
-  
-  <ul id="menu" class="menu">
+  <ul id="menu" class="main-menu menu">
         <li class="menu-item menu-item-home">
 
-    <a href="/" rel="section"><i class="fa fa-fw fa-home"></i>Home</a>
+    <a href="/" rel="section"><i class="fa fa-home fa-fw"></i>Home</a>
 
   </li>
         <li class="menu-item menu-item-archives">
 
-    <a href="/archives/" rel="section"><i class="fa fa-fw fa-archive"></i>Archives</a>
+    <a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>Archives</a>
 
   </li>
   </ul>
-
 </nav>
+
+
+
+
 </div>
     </header>
 
@@ -140,14 +143,12 @@
         <div class="content-wrap">
           
 
-          <div class="content">
+          <div class="content index posts-expand">
             
-
-  <div class="posts-expand">
-        
+      
   
   
-  <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="zh-cn">
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-cn">
     <link itemprop="mainEntityOfPage" href="http://miaoz.me/2020/02/28/easy-science-surfing-guide/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -160,15 +161,15 @@
       <meta itemprop="name" content="饮水琐话">
     </span>
       <header class="post-header">
-        <h1 class="post-title" itemprop="name headline">
+        <h2 class="post-title" itemprop="name headline">
           
             <a href="/2020/02/28/easy-science-surfing-guide/" class="post-title-link" itemprop="url">简易科学上网指南</a>
-        </h1>
+        </h2>
 
         <div class="post-meta">
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
+                <i class="far fa-calendar"></i>
               </span>
               <span class="post-meta-item-text">Posted on</span>
 
@@ -176,7 +177,7 @@
             </span>
               <span class="post-meta-item">
                 <span class="post-meta-item-icon">
-                  <i class="fa fa-calendar-check-o"></i>
+                  <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">Edited on</span>
                 <time title="Modified: 2020-09-03 12:23:40" itemprop="dateModified" datetime="2020-09-03T12:23:40+08:00">2020-09-03</time>
@@ -226,11 +227,11 @@
   
   
 
-        
+      
   
   
-  <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="zh-cn">
-    <link itemprop="mainEntityOfPage" href="http://miaoz.me/2017/07/10/why-express/">
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-cn">
+    <link itemprop="mainEntityOfPage" href="http://miaoz.me/2018/02/09/font-rendering/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/avatar.gif">
@@ -242,26 +243,26 @@
       <meta itemprop="name" content="饮水琐话">
     </span>
       <header class="post-header">
-        <h1 class="post-title" itemprop="name headline">
+        <h2 class="post-title" itemprop="name headline">
           
-            <a href="/2017/07/10/why-express/" class="post-title-link" itemprop="url">我们为何表达</a>
-        </h1>
+            <a href="/2018/02/09/font-rendering/" class="post-title-link" itemprop="url">macOS 与 Windows 的字体渲染</a>
+        </h2>
 
         <div class="post-meta">
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
+                <i class="far fa-calendar"></i>
               </span>
               <span class="post-meta-item-text">Posted on</span>
 
-              <time title="Created: 2017-07-10 23:30:00" itemprop="dateCreated datePublished" datetime="2017-07-10T23:30:00+08:00">2017-07-10</time>
+              <time title="Created: 2018-02-09 09:00:00" itemprop="dateCreated datePublished" datetime="2018-02-09T09:00:00+08:00">2018-02-09</time>
             </span>
               <span class="post-meta-item">
                 <span class="post-meta-item-icon">
-                  <i class="fa fa-calendar-check-o"></i>
+                  <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">Edited on</span>
-                <time title="Modified: 2020-12-22 18:36:37" itemprop="dateModified" datetime="2020-12-22T18:36:37+08:00">2020-12-22</time>
+                <time title="Modified: 2020-12-22 19:11:23" itemprop="dateModified" datetime="2020-12-22T19:11:23+08:00">2020-12-22</time>
               </span>
 
           
@@ -275,65 +276,29 @@
     <div class="post-body" itemprop="articleBody">
 
       
-          <p><img src="https://blog.yingtaoxianbao.com/img/202012/why-express-00.jpg" alt="why-express-00"></p>
-<blockquote>
-<p>写在前面：<br>本文只陈述某种狭隘的知见，而非且无力描摹真理；<br>本人不学无术，且习惯性打偏。</p>
-</blockquote>
-<h2 id="语言的力量"><a href="#语言的力量" class="headerlink" title="语言的力量"></a>语言的力量</h2><p><img src="https://blog.yingtaoxianbao.com/img/202012/why-express-01.jpg" alt="why-express-01"></p>
-<p>人的语言本身拥有什么的样的力量？</p>
-<p>我常常会为此感到疑惑。</p>
-<p>一方面，我们知道「三人成虎」、「众口铄金」、「防民之口，甚于防川」，许多人视他人言语如刀锋。</p>
-<p>另一方面，很多事实（比如最近网络上的许多事情）告诉我们，舆论根本毫无力量。哪怕脱离公共舆论，在现实生活中，我们也有太多语言不能产生作用的情况。</p>
-<p>语言或许有力量，但个体的表达大多数时候是无用且无力的。</p>
-<p>作为普通人，我们很多时候说的、听的，都是些一点儿也不新鲜的、没有作用的废话。</p>
-<p>至少，我感受到的是如此。</p>
-<p>一百句漂亮话也比不上一次实际的行动。</p>
-<p>不止我这么认为，「君子欲讷于言而敏于行」、「沉默是金」，我们的祖宗，同样崇尚行动多于言语。</p>
-<p>是的，越缺少什么，我们就越推崇什么。</p>
-<p>大多数语言毫无力量，可我们却不得不喋喋不休，或者忍受喋喋不休。</p>
-<p>人人自说自话，世界人声鼎沸，喧嚣而浮躁。</p>
-<p>这些无用的信息互相纠缠积累，使得现实中充斥着误解，网络上满是负面信息。</p>
-<h2 id="道理何用"><a href="#道理何用" class="headerlink" title="道理何用"></a>道理何用</h2><p><img src="https://blog.yingtaoxianbao.com/img/202012/why-express-02.jpg" alt="why-express-02"></p>
-<blockquote>
-<p>听过很多道理，却依然过不好这一生。</p>
-</blockquote>
-<p>《后会无期》这部电影对人类最大的贡献可能是这个金句。</p>
-<p>长这么大，道理谁不懂，特么要你来说？</p>
-<p>人们通常不会喜欢跟自己大讲道理的人，不管这个人是领导，还是家长。</p>
-<p>为什么你不应当讲道理？</p>
-<p>首先，「上士闻道，勤而行之；中士闻道，若存若亡；下士闻道，大笑之。」对于绝大多数人而言，他们并非不知道道理本身，而是无法坚定地践行道理，于是产生很多痛苦。</p>
-<p>其次，出于极为功利的目的，多数人总是喜欢传播看似能解决特定问题的方法论或方法。比如如何减肥、如何学英语、如何管理时间、如何实现财务自由……</p>
-<p>而实际上呢？</p>
-<p>吃过亏的人都知道：做梦会比较实在一点。</p>
-<p>在信息时代，一方面，许多人利用信息不对称大获其利，一方面，哪怕绝世秘籍就摆在面前，大多数人还是无法一心一意地把神功练成。</p>
-<p>我想，唯一能值得所有人知道的是：没有银弹（No Silver Bullet），没有捷径。</p>
-<p>把话题拉回来，我这么判断，许多时候，我们的表达并不寻求道理或解决方案，也不能奢望。</p>
-<h2 id="不能感同身受"><a href="#不能感同身受" class="headerlink" title="不能感同身受"></a>不能感同身受</h2><p><img src="https://blog.yingtaoxianbao.com/img/202012/why-express-03.jpg" alt="why-express-03"></p>
-<p>遗憾的是，移情是一种稀缺的能力。</p>
-<p>尽管没有也不准备做任何社会调查，但我仍然非常不负责任地这么说了：</p>
-<p>当你向好友、闺蜜或者之类的大倒苦水，甚至声泪俱下的时候，有极高的概率，对方并不能感同身受。</p>
-<p>再恶意一点地揣测，对方甚至还在心里面腹诽：老子作业还没写剧还没看，特么别拿这些鸡毛蒜皮的玩意儿打扰我玩游戏！</p>
-<p>你要是事无巨细地唠叨个俩小时，甚至还会激起更大的反感。</p>
-<p>当然，人类的幸运在于，我们还有理性的力量，让我们即使无法感同身受，也可以恰当甚至出色地展现耐心和同情。</p>
-<p>但你不能否认，当自己作为情绪垃圾桶的时候，心里是否有那么一丝不耐烦呢？</p>
-<p>他人的情绪，终归是他人的情绪。</p>
-<p>为何都说“男儿有泪不轻弹”，因为一个体面的成年人，不会期待用情绪的发泄解决任何问题。</p>
-<p>这就是我看不下《火影忍者》的原因。</p>
-<h2 id="寻求共鸣以及喂养巨怪"><a href="#寻求共鸣以及喂养巨怪" class="headerlink" title="寻求共鸣以及喂养巨怪"></a>寻求共鸣以及喂养巨怪</h2><p><img src="https://blog.yingtaoxianbao.com/img/202012/why-express-04.jpg" alt="why-express-04"></p>
-<p>一不为讲道理，二不指望他人感同身受。</p>
-<p>那么，我们到底为何表达？</p>
-<p>「老道消息」写过一篇文章，叫<a target="_blank" rel="noopener" href="https://mp.weixin.qq.com/s/9lNUmoTEE43B6yBI-v2YEA">「写微信公众号的都是下九流」</a>，我以为说得很透彻。</p>
-<p>多数时候，我们既不托物言志，也拿不起五毛钱，我们只是寻求共鸣，寻求身份认同，这就是我们为何表达，也是许多内容可以成功传播的原因。</p>
-<p>然后呢？</p>
-<p>不管出于什么原因，很显然，恶意和负面的信息更容易得到传播。而高效的传播能力代表着什么呢？</p>
-<p>最近复活的「咪蒙」据说靠写文章发广告已经挣了几千万。</p>
-<p>反正，在这样或那样的动机之下，又有着匿名和虚拟的加持，整个网络充斥着激发人们负面情绪的信息。这些恶意的巨怪盘踞在互联网世界的任何一个角落，稍不留神，你就会激怒它们，然后将它们喂养得更大。</p>
-<p>触乐曾有一篇文章<a target="_blank" rel="noopener" href="http://www.chuapp.com/article/268887.html">「被洞穴巨怪们监视着的网络世界」</a>谈及这一现象，不能说多么深刻的剖析，但至少让我意识到「Don’t feed the trolls」。</p>
-<h2 id="理想和练习"><a href="#理想和练习" class="headerlink" title="理想和练习"></a>理想和练习</h2><p><img src="https://blog.yingtaoxianbao.com/img/202012/why-express-05.gif" alt="why-express-05"></p>
-<p>作为一个不爱空谈也不指望以德服人的体面人，我们最理想的情况是，保持安静，只在必要的时候有的放矢。</p>
-<p>然而不幸的是，如同「娱乐大众」需要天赋一样，「说到点子上」也并不是一项不求而得的技能。</p>
-<p>尤其对我这样资质平庸的人而言，更需要练习。</p>
-<p>所以有了这篇文章。</p>
+          <p><img src="https://blog.yingtaoxianbao.com/img/202012/font-rendering-0.jpg" alt="font-rendering-0"></p>
+<p>假如你同时用过 macOS 和 Windows，可能会发现一个很微妙但是又确实存在的区别：</p>
+<p>这两个系统上的字体看起来不太一样。</p>
+<p><img src="https://blog.yingtaoxianbao.com/img/202012/font-rendering-1.jpg" alt="font-rendering-1"></p>
+<p>如果是第一次看到 macOS，你可能会觉得字体看起来会有些毛茸茸、“发虚”的感觉（在 Retina 屏幕下这一点已经大幅度改善），但似乎更好看。</p>
+<p>而一旦你适应了 macOS 的字体风格，再回头看 Windows，就会感觉那上面的字体虽然清晰，却显得有些单调丑陋。</p>
+<p>为什么呢？</p>
+<p>因为 macOS 和 Windows 采用不同的字体渲染策略。</p>
+<p>对于如何在屏幕上呈现字体，苹果和微软有着不同的看法。</p>
+<ul>
+<li>苹果认为，字体算法的目标是尽可能还原字体的原始设计，即使代价是造成些许模糊。</li>
+<li>微软认为，字体的形状要适应像素的限制，保证清晰，容易易辨识，即使代价是字体的形状因此背离原始设计。</li>
+</ul>
+<p><img src="https://blog.yingtaoxianbao.com/img/202012/font-rendering-2.jpg" alt="font-rendering-2"></p>
+<p>对于字体渲染风格的喜好或许因人而异，只不过我恰好比较喜欢苹果的风格。</p>
+<p>事实上，这正是我第一次接触到苹果产品时最深刻的印象。</p>
+<p><img src="https://blog.yingtaoxianbao.com/img/202012/font-rendering-3.png" alt="font-rendering-3"></p>
+<p>那个时候，高分辨率的屏幕还没有大行其道，而我也还是个用着神船笔记本的穷学生，一次偶然装了 Safari for Windows，却惊讶地发现，同样一个网页，在 Safari 里看起来就是比较美！</p>
+<p>感谢那些向 Windows 世界展示了苹果美学的工程师，尽管他们后来放弃维护这个产品。</p>
+<p>虽然那是一种毛茸茸的美，但却一下子击中了我，使我义无反顾地成为了忠实的苹果用户。</p>
+<p>事实上，随着软硬件的不断进化，不同系统之间的字体渲染技术差距正在减少，如果有区别，也主要是各自的理念和偏好造成的。</p>
+<p><img src="https://blog.yingtaoxianbao.com/img/202012/font-rendering-4.png" alt="font-rendering-4"></p>
+<p>尽管如此，macOS 的字体渲染风格在美感上还是得到较多认同的，所以诸如 GDI++、MacType 之类在 Windows 上模仿 macOS 字体渲染风格的软件层出不穷，而苹果用户则少有想要获得 Windows 字体渲染效果的需求。</p>
 
       
     </div>
@@ -349,9 +314,279 @@
   
   
 
-  </div>
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-cn">
+    <link itemprop="mainEntityOfPage" href="http://miaoz.me/2018/01/26/macOS-pkg&dmg/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="Miaoz">
+      <meta itemprop="description" content="网路无限宽广。">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="饮水琐话">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2018/01/26/macOS-pkg&dmg/" class="post-title-link" itemprop="url">macOS 软件安装包 pkg 和 dmg</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">Posted on</span>
+
+              <time title="Created: 2018-01-26 09:00:00" itemprop="dateCreated datePublished" datetime="2018-01-26T09:00:00+08:00">2018-01-26</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">Edited on</span>
+                <time title="Modified: 2020-12-22 19:22:23" itemprop="dateModified" datetime="2020-12-22T19:22:23+08:00">2020-12-22</time>
+              </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <p><img src="https://blog.yingtaoxianbao.com/img/202012/apk&dmg-1.jpg" alt="apk&amp;dmg-1"></p>
+<p>从 Snow Leopard，具体来说，是从当时还被称为 Mac OS X，版本号为  10.6.6 的系统版本，苹果开始为 macOS 提供统一的应用商店，Mac App Store。</p>
+<p>也是从那个时候开始，macOS 越来越多地得到，原本一母同胞的小兄弟，iOS 的特性。</p>
+<p><img src="https://blog.yingtaoxianbao.com/img/202012/apk&dmg-2.jpg" alt="apk&amp;dmg-2"></p>
+<p>不过，相比封闭而年轻的 iOS，macOS 毕竟是更为自由、强大，也更有历史的桌面操作系统。更何况 Mac App Store 自身的体验也相当一般，毛病众多，所以，在 macOS 上，传统的软件安装方式仍然被广泛使用中。</p>
+<p>具体来说，多数软件会提供 dmg 或 pkg 格式的安装包。</p>
+<h2 id="dmg"><a href="#dmg" class="headerlink" title="dmg"></a>dmg</h2><p>dmg 是苹果的压缩镜像文件，类似于 Windows 下的 ISO。</p>
+<p>它是 macOS 应用软件通用的打包格式，里面一般包含“应用程序名.app”的图标和一个应用程序文件夹（/Applications）快捷方式。</p>
+<p>直接将图标拖曳至应用程序文件夹，即可完成安装。</p>
+<p>想要卸载应用，也非常简单绿色，多数时候直接在 Launchpad 或 Applications 目录下删除应用（文件夹）即可。</p>
+<h2 id="pkg"><a href="#pkg" class="headerlink" title="pkg"></a>pkg</h2><p>pkg 属于系统级软件的安装程序，相当于 iOS 越狱后装的 deb，一般会修改系统配置，权限较高，类似 Windows 下的安装程序 .exe 和 .msi。</p>
+<p>pkg 安装一般要求 sudo 授权，卸载 pkg 安装的应用也比较麻烦。</p>
+<p>对于这种软件，除了其自身可能提供的卸载程序，我们还可以借助第三方软件，如 <a target="_blank" rel="noopener" href="https://cleanmymac.com">CleanMyMac</a>、<a target="_blank" rel="noopener" href="https://freemacsoft.net/appcleaner/">AppCleaner</a> 等来彻底卸载删除。</p>
+<h2 id="mpkg"><a href="#mpkg" class="headerlink" title="mpkg"></a>mpkg</h2><p>pkg 是单个应用程序的安装包，而 mpkg（multi pkg）则是多个 pkg 。</p>
+<p>最经常见到的是 macOS 自身的安装器文件，如果你打开从 Mac App Store 下载的“macOS High Sierra.app”，就可以看到一个 .mpkg 文件，其中有着系统安装包主体的文件。</p>
+<h2 id="结语"><a href="#结语" class="headerlink" title="结语"></a>结语</h2><p><img src="https://blog.yingtaoxianbao.com/img/202012/apk&dmg-3.png" alt="apk&amp;dmg-3"></p>
+<p>除了使用 dmg、pkg 格式的软件包来安装软件，作为与 *UNX 有着深厚历史渊源，并且拥有众多程序员用户的操作系统，macOS 下也有着优秀的软件包管理工具 —— MacPorts 和 Homebrew。</p>
+<p>通过它们，专业用户可以方便地下载、安装和管理丰富的开源软件。</p>
+<p>而那，同样是一个迷人的生态，有机会再做介绍吧。</p>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-cn">
+    <link itemprop="mainEntityOfPage" href="http://miaoz.me/2018/01/17/baader-meinhof-phenomenon/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="Miaoz">
+      <meta itemprop="description" content="网路无限宽广。">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="饮水琐话">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2018/01/17/baader-meinhof-phenomenon/" class="post-title-link" itemprop="url">巴德尔-迈因霍夫现象：这妹妹我曾见过</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">Posted on</span>
+
+              <time title="Created: 2018-01-17 23:40:00" itemprop="dateCreated datePublished" datetime="2018-01-17T23:40:00+08:00">2018-01-17</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">Edited on</span>
+                <time title="Modified: 2020-12-22 19:02:00" itemprop="dateModified" datetime="2020-12-22T19:02:00+08:00">2020-12-22</time>
+              </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <h2 id="这个妹妹我昨天见过"><a href="#这个妹妹我昨天见过" class="headerlink" title="这个妹妹我昨天见过"></a>这个妹妹我昨天见过</h2><p>在《红楼梦》中，贾宝玉见林黛玉，一个直呼“这个妹妹我曾见过”，一个心想“何等眼熟到如此”，盖因为他们是真见过，虽然那是前世。</p>
+<p>生活中，你一定也不乏这种体验。</p>
+<p>当你得知了一个新的信息，例如某个单词、概念、产品，甚至八卦等等，不久之后你就会有机会与之再次相遇。 </p>
+<p>当你听到一首好歌，然后仿佛到处都在放这首歌；</p>
+<p>当你得知了某个明星的八卦，顿时就发现许多人都在热烈地讨论着它；</p>
+<p>当你或者身边某个朋友买了某个品牌的汽车，好像整条街上跑的都是这个品牌的车；</p>
+<p>类似的还有一种，看时间的时候，经常会发现都是 11:11 或者 12:12？</p>
+<p>……</p>
+<p>这就是<strong><a target="_blank" rel="noopener" href="http://wikibin.org/articles/baader-meinhof-phenomenon.html">巴德尔-迈因霍夫现象（Baader-Meinhof Phenomenon）</a></strong>。</p>
+<h2 id="巴德尔-迈因霍夫现象"><a href="#巴德尔-迈因霍夫现象" class="headerlink" title="巴德尔-迈因霍夫现象"></a>巴德尔-迈因霍夫现象</h2><p><img src="https://blog.yingtaoxianbao.com/img/202012/baader-meinhof-1.jpg" alt="baader-meinhof-1"></p>
+<blockquote>
+<p>这个现象最初是 1986 年由 St. Paul Pioneer Press 的读者 Terry Mullen 提出的，他写信给一个专门收集搞笑事的栏目（Bulletin Board），提及了一件事，说他第一次听说“巴德尔和迈因霍夫集团”（德国恐怖组织“赤色军团”），很快又从另一个渠道很巧合地碰到了这个词。这个故事刊登后，读者不断提交经历过的类似事件，这个现象也因此被命名为“巴德尔-迈因霍夫现象” 。</p>
+</blockquote>
+<p>与被认为是“幻觉记忆”、“似曾相识”的<strong><a target="_blank" rel="noopener" href="https://zh.wikipedia.org/zh-cn/既視感">既视感</a></strong>不同，巴德尔-迈因霍夫现象是你真的知道、听过、见过这个妹妹。</p>
+<p><img src="https://blog.yingtaoxianbao.com/img/202012/baader-meinhof-2.jpg" alt="baader-meinhof-2"></p>
+<p>而你对这个妹妹非常感兴趣，所以，你的注意力相比以前，更加地集中在了妹妹身上。</p>
+<p>这是由人大脑的特性所决定的。心理学有一个说法，叫选择性注意（Selective attention），学渣就不班门弄斧了，这里有个有趣的<a target="_blank" rel="noopener" href="http://v.youku.com/v_show/id_XMTcwMzQ1NjYw.html">实验视频</a>，可以看一看。</p>
+<p>总之，如果我们将清醒时刻的每一分每一秒都分解开来，其实每一天，我们的大脑都将会接收到成千上万个事件。</p>
+<p>人们的大脑不可能面面俱到地同等处理这些信息，而是会选择性地去关注自己感兴趣的事物。当大脑第一次发现一个事物，并且对它产生了兴趣，在之后的时间里便会更加注意这个事物，同时忽略其他不在意的事物。</p>
+<p>巴德尔-迈因霍夫现象在品牌培养和产品销售中具有重要作用，而在学术上，它和心理学的共时性、人脑的模式识别等等也有一定关联，但门外汉如我已经决定不再深入。</p>
+<p>见好就收。</p>
+<h2 id="正能量收尾"><a href="#正能量收尾" class="headerlink" title="正能量收尾"></a>正能量收尾</h2><p><img src="https://blog.yingtaoxianbao.com/img/202012/baader-meinhof-3.jpg" alt="baader-meinhof-3"></p>
+<p>如果你不想要这个妹妹，也非难事，只需不那么“留心”就行。</p>
+<p>当然，这或许也会让你的生活变得更麻木乏味，或许，生活中还是需要一些随处可见的小小意外和惊喜，才会更好一些呢。</p>
+<p>这里有一段故事分享：</p>
+<p><img src="https://blog.yingtaoxianbao.com/img/202012/baader-meinhof-4.jpg" alt="baader-meinhof-4"></p>
+<blockquote>
+<p>有个人某天到北京的“翠微百货”去吃饭。过了两天，在翻阅《唐僧情史》时，“翠微”两个字让他仔细读了一首以前没注意的诗：“<em>有缘未必相逢，无情莫向翠微。人间一堕十劫，犹记桃花未归。</em>”</p>
+</blockquote>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-cn">
+    <link itemprop="mainEntityOfPage" href="http://miaoz.me/2018/01/16/deus-ex/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="Miaoz">
+      <meta itemprop="description" content="网路无限宽广。">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="饮水琐话">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2018/01/16/deus-ex/" class="post-title-link" itemprop="url">机械降神和御都合主义</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">Posted on</span>
+
+              <time title="Created: 2018-01-16 23:40:00" itemprop="dateCreated datePublished" datetime="2018-01-16T23:40:00+08:00">2018-01-16</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">Edited on</span>
+                <time title="Modified: 2020-12-22 19:05:10" itemprop="dateModified" datetime="2020-12-22T19:05:10+08:00">2020-12-22</time>
+              </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <p><img src="https://blog.yingtaoxianbao.com/img/202012/deus-ex-0.jpg" alt="deus-ex-0"></p>
+<h2 id="大逆转中的机械降神"><a href="#大逆转中的机械降神" class="headerlink" title="大逆转中的机械降神"></a>大逆转中的机械降神</h2><p><img src="https://blog.yingtaoxianbao.com/img/202012/deus-ex-1.jpg" alt="deus-ex-1"></p>
+<p>第一次意识到“机械降神”这个词并感到好奇，是看完《大逆转裁判2》流程，浏览玩家讨论的时候。</p>
+<p>当时不少人吐槽福尔摩斯的最后登场，虽然很帅气吧，但过于夸张以至于超乎逻辑，其中就出现了“机械降神”这个评价。</p>
+<p>那一瞬间，我自然而然就明白了这个词的用意，顺手在维基上一查。</p>
+<p>Deus ex machina，这是个拉丁语词组（英译：God from the machine），意思是机关跑出的神（Deus 在拉丁语中泛指神），中文一般翻译为“舞台机关送神”、“机械降神”、“机器神”、“解围之神”等。</p>
+<p>在古希腊戏剧，当剧情陷入胶着，困境难以解决时，突然出现拥有强大力量的神将难题解决，令故事得以收拾、有个好结局。当时，利用起重机或起升机的机关，将扮演神的下等演员载送至舞台上。</p>
+<p>这种表演手法是人为的，制造出意料之外的剧情大逆转。如今，这种手法通常被评论家认为是不高明的说书技巧，因为它破坏了故事的内在逻辑，纵使有时候会为了这个理由而故意采用。</p>
+<p>唔……果不其然啊。</p>
+<p>然后，当我端详着 Deus ex，发现自己并不是第一次见到它。</p>
+<p>仍然跟游戏有关，而且大大的有关。</p>
+<h2 id="杀出重围是什么鬼"><a href="#杀出重围是什么鬼" class="headerlink" title="杀出重围是什么鬼"></a>杀出重围是什么鬼</h2><p><img src="https://blog.yingtaoxianbao.com/img/202012/deus-ex-2.jpg" alt="deus-ex-2"></p>
+<p>Deus Ex（国内通常译作“杀出重围”，其实并不恰当）是以<strong>赛博朋克</strong>为主题的动作角色扮演及第一人称射击游戏系列。</p>
+<p>故事设定于科技非常发达，义体强化普及的反乌托邦未来世界，主要集中在想要控制世界的秘密组织之间的冲突，以及超人类主义和科技所带来的影响。</p>
+<p>游戏的核心，正是“人造之神”与“强大外力干涉”的故事。</p>
+<p>强大跨国科技企业，以及类似光明会（illuminati）这样幕后组织，渗透入人类社会的各个角落，坐拥高端科技与财富，操纵影响着政治经济乃至于民众的生活，它们毫无疑问有着如神一般的力量和地位。</p>
+<p>同时，黑科技所造就的，有着超能力一般的“义体强化人”也是对“人造之神”的又一个隐喻。</p>
+<p>Deus Ex 是个好游戏，不过我们就暂时到这里。</p>
+<h2 id="御都合主义"><a href="#御都合主义" class="headerlink" title="御都合主义"></a>御都合主义</h2><p><img src="https://blog.yingtaoxianbao.com/img/202012/deus-ex-3.jpg" alt="deus-ex-3"></p>
+<p>回到<strong>机械降神</strong>的定义，我心中很快又浮现了另一个词语。</p>
+<p>御都合主义（日语：ごつごうしゅぎ），原本是指没有主见或原则，行为随时机或场合改变的人。</p>
+<p>如今，这个术语主要是指在创作作品中，为了让故事得以顺利进行，在剧情中安排了不自然或者不合理的发展，诸如吃书、超展开、不符合逻辑或没有伏笔的偶然等等。</p>
+<p>《火影忍者》、《海贼王》、《名侦探柯南》……许多非常流行的、优秀的，尤其连载时间超长的作品都遭受过都合主义的批评。</p>
+<p>而且，我也完全相信，不论古今中外，什么文艺作品，使用“机械降神”、“都合主义”，或者别的什么词，我们都曾经对某些作品有过相似的看法，这里就不再列举了。</p>
+<h2 id="最后"><a href="#最后" class="headerlink" title="最后"></a>最后</h2><p><img src="https://blog.yingtaoxianbao.com/img/202012/deus-ex-4.jpg" alt="deus-ex-4"></p>
+<p>创作无疑是一件伟大的事情，伟大不易造就，所以创作者自有其困境。</p>
+<p>如何把握无巧不成书和弄巧成拙之间的微妙，对于每个创作者、乃至于每一次创作都是一次严峻的考验。</p>
+<p>而作为读者和观众，对于优秀的作品，你可以微笑着欣赏，也可以举高高吹爆！是的，《大逆转裁判》和《Deus Ex》都是好游戏啊好游戏！</p>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
 
   
+  <nav class="pagination">
+    <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="page-number" href="/page/3/">3</a><a class="extend next" rel="next" href="/page/2/"><i class="fa fa-angle-right" aria-label="Next page"></i></a>
+  </nav>
 
 
 
@@ -360,7 +595,7 @@
 
 <script>
   window.addEventListener('tabs:register', () => {
-    let activeClass = CONFIG.comments.activeClass;
+    let { activeClass } = CONFIG.comments;
     if (CONFIG.comments.storage) {
       activeClass = localStorage.getItem('comments_active') || activeClass;
     }
@@ -416,24 +651,16 @@
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">2</span>
+          <span class="site-state-item-count">11</span>
           <span class="site-state-item-name">posts</span>
         </a>
       </div>
       <div class="site-state-item site-state-tags">
-        <span class="site-state-item-count">1</span>
+        <span class="site-state-item-count">5</span>
         <span class="site-state-item-name">tags</span>
       </div>
   </nav>
 </div>
-  <div class="links-of-author motion-element">
-      <span class="links-of-author-item">
-        <a href="mailto:yimouren@gmail.com" title="E-Mail → mailto:yimouren@gmail.com" rel="noopener" target="_blank"><i class="fa fa-fw fa-envelope"></i>E-Mail</a>
-      </span>
-      <span class="links-of-author-item">
-        <a href="https://twitter.com/_miaoz_" title="Twitter → https:&#x2F;&#x2F;twitter.com&#x2F;_miaoz_" rel="noopener" target="_blank"><i class="fa fa-fw fa-twitter"></i>Twitter</a>
-      </span>
-  </div>
 
 
 
@@ -451,15 +678,19 @@
       <div class="footer-inner">
         
 
+        
+
 <div class="copyright">
   
   &copy; 
   <span itemprop="copyrightYear">2020</span>
   <span class="with-love">
-    <i class="fa fa-user"></i>
+    <i class="fa fa-heart"></i>
   </span>
   <span class="author" itemprop="copyrightHolder">Miaoz</span>
 </div>
+  <div class="powered-by">Powered by <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://muse.theme-next.org/" class="theme-link" rel="noopener" target="_blank">NexT.Muse</a>
+  </div>
 
         
 
